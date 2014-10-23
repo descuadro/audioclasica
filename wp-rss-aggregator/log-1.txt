@@ -1,0 +1,41 @@
+[23-09-2014 06:00:11] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/LY9QN4jP3u0" for post #17: Unable to create directory wp-content/uploads/2014/09. Is its parent directory writable by the server?
+[23-09-2014 06:00:13] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/LY9QN4jP3u0" for post #17: Unable to create directory wp-content/uploads/2014/09. Is its parent directory writable by the server?
+[23-09-2014 06:00:25] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/o6xLNwhiwDc" for post #20: Unable to create directory wp-content/uploads/2014/08. Is its parent directory writable by the server?
+[23-09-2014 06:00:27] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/o6xLNwhiwDc" for post #20: Unable to create directory wp-content/uploads/2014/08. Is its parent directory writable by the server?
+[23-09-2014 06:00:32] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/soLpYbCwYW0" for post #23: Unable to create directory wp-content/uploads/2014/07. Is its parent directory writable by the server?
+[23-09-2014 06:00:34] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/soLpYbCwYW0" for post #23: Unable to create directory wp-content/uploads/2014/07. Is its parent directory writable by the server?
+[23-09-2014 06:00:42] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/IEAnbBug39c" for post #26: Unable to create directory wp-content/uploads/2014/07. Is its parent directory writable by the server?
+[23-09-2014 06:00:43] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/IEAnbBug39c" for post #26: Unable to create directory wp-content/uploads/2014/07. Is its parent directory writable by the server?
+[23-09-2014 06:00:55] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/q-sCBxqziFI" for post #29: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:02] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/q-sCBxqziFI" for post #29: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:07] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/qQDqv_X1ZYA" for post #32: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:10] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/qQDqv_X1ZYA" for post #32: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:13] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/z8DtNXHmokM" for post #35: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:20] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/z8DtNXHmokM" for post #35: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:29] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/hJ3CmXrcGBE" for post #38: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:31] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/hJ3CmXrcGBE" for post #38: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:38] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/-7O9KCndocE" for post #41: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:39] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/-7O9KCndocE" for post #41: Unable to create directory wp-content/uploads/2014/06. Is its parent directory writable by the server?
+[23-09-2014 06:01:49] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/v0_QKOY9hBQ" for post #44: Unable to create directory wp-content/uploads/2014/05. Is its parent directory writable by the server?
+[23-09-2014 06:01:56] WPRSS > wprss_ftp_media_sideload_image:
+Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/v0_QKOY9hBQ" for post #44: Unable to create directory wp-content/uploads/2014/05. Is its parent directory writable by the server?
+

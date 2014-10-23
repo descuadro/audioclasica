@@ -1,0 +1,311 @@
+select#ftp-fallback-author-method {
+	margin-right: 10px;
+}
+
+#wprss-ftp-genenaral-metabox .inside h3 {
+	background: transparent;
+	border: 0 solid transparent;
+	font-weight: bold;
+	padding: 6px 0;
+	cursor: auto;
+
+	user-select: initial;
+	-webkit-user-select: initial;
+	-ms-user-select: initial;
+	-moz-user-select: initial;
+	-o-user-select: initial;
+}
+
+input[type="checkbox"].meta-checkbox{
+	margin-right: 6px;
+}
+
+input#ftp-source-link-text, input#wprss_ftp_source_link_text {
+	width: 100%;
+}
+
+
+/*
+ * Styles for disabled settings in core
+ */
+.wprss-inactive {
+	background: #eee;
+	cursor: not-allowed;
+}
+.wprss-inactive th,
+.wprss-inactive td label{
+	color: #999;
+	cursor: not-allowed;
+}
+
+
+.dimension-divider {
+	margin-right: 8px;
+}
+
+#post_tags,
+#wprss_ftp_post_tags {
+	width: 450px;
+}
+
+
+/* post_append editor */
+#post-append-container {
+	position: relative;
+	display: block;
+}
+#post-append-container #post-append-placeholder {
+	display: block;
+	margin-top: 10px;
+	vertical-align: top;
+}
+#post-append-container #post-append-editor-container {
+	display: block;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+
+#post-append-container #post-append-placeholder table td {
+	padding: 5px;
+}
+
+#wp-wprsspostappend-editor-container {
+	background: white;
+}
+
+#ftp-min-width,
+#ftp-min-height {
+	width: 75px;
+}
+
+
+tr.wprss-tr-hr {
+	border-top: 1px solid #eee !important;
+}
+
+.wprss-ftp-inactive-meta > label {
+	color: #999;
+}
+
+
+/* ERROR LOG TEXT AREA */
+#wprss-ftp-error-log-textarea {
+    width: 800px;
+    height: 400px;
+    font-family: Menlo, Monaco, monospace;
+    background: none;
+    white-space: pre;
+    overflow: auto;
+    display: block;
+    background: rgb( 255, 245, 245 );
+}
+
+span#wprss-ftp-authors-options > * {
+	vertical-align: middle;
+}
+
+
+table#wprss-ftp-placeholders-table td {
+	padding: 7px 10px !important;
+}
+
+
+/* POST TYPE COLUMN */
+body.post-type-wprss_feed.edit-php table.wp-list-table.posts thead th#post-type {
+    width: 110px !important;
+}
+
+
+/* EXTRACTION RULES SETTINGS */
+div.wprss-ftp-extraction-rule-section {
+	display: block !important;
+	margin-bottom: 15px !important;
+}
+
+div.wprss-ftp-extraction-rule-section > input[type="text"] {
+	margin-right: 8px !important;
+}
+
+div.wprss-ftp-extraction-rule-section > select.wprss-ftp-extraction-rules-manipulation-type {
+	margin-right: 8px !important;
+}
+
+button.wprss-ftp-add-extraction-rule {
+	display: block !important;
+	margin-bottom: 10px !important;
+}
+
+
+
+/* CUSTOM NAMESPACE STYLES */
+div.wprss-ftp-namespace-section {
+	position: relative;
+	display: block !important;
+	margin-bottom: 15px !important;
+}
+div.wprss-ftp-namespace-section > input {
+	width: 250px !important;
+}
+
+/* screen width <= 1010px */
+@media only screen and (max-width: 1010px) {
+	div.wprss-ftp-namespace-section > input {
+		display: block !important;
+		width: 100% !important;
+		margin-bottom: 20px;
+	}
+	div.wprss-ftp-namespace-section > input:first-child {
+		width: calc( 100% - 40px ) !important;
+		margin-bottom: 5px;
+	}
+	div.wprss-ftp-namespace-section > button {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+/* screen width >= 782px (WordPress repsonsive width) */
+@media only screen and (max-width: 782px) {
+	div.wprss-ftp-namespace-section > button {
+		padding: 9px 10px !important;
+		width: 40px !important;
+		height: auto !important;
+		line-height: 1.5 !important;
+	}
+	div.wprss-ftp-namespace-section > input:first-child {
+		width: calc( 100% - 48px ) !important;
+	}
+}
+
+
+
+
+
+/* CUSTOM FIELDS STYLES */
+div.wprss-ftp-custom-fields-section {
+	position: relative;
+}
+div.wprss-ftp-custom-fields-section > * {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px 10px 0;
+}
+div.wprss-ftp-custom-fields-section > *:not(button) {
+	width: 180px;
+}
+div.wprss-ftp-custom-fields-section > button {
+	width: auto;
+}
+
+/* screen width < 1375px */
+@media only screen and (max-width: 1375px) {
+	div.wprss-ftp-custom-fields-section > *:not(button) {
+		width: 150px;
+	}
+}
+
+
+/* screen width < 1290px */
+@media only screen and (max-width: 1290px) {
+	div.wprss-ftp-custom-fields-section {
+		margin-bottom: 20px !important;
+	}
+	div.wprss-ftp-custom-fields-section > input:nth-child(2) {
+		margin: 0 10px 0 0 !important;
+		width: calc( 50% - 10px );
+		display: inline-block;
+	}
+	div.wprss-ftp-custom-fields-section > input:nth-child(3) {
+		margin: 0 !important;
+		width: 50%;
+		display: inline-block;
+	}
+	div.wprss-ftp-custom-fields-section > select {
+		display: block !important;
+		width: calc( 100% - 40px );
+	}
+	div.wprss-ftp-custom-fields-section > button {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+/* screen width < 782px */
+@media only screen and (max-width: 782px) {
+	.wprss-ftp-remove-custom-mapping {
+		padding: 3px 13px !important;
+		font-size: 20px !important;
+		height: 36px !important;
+	}
+	div.wprss-ftp-custom-fields-section > select {
+		display: block !important;
+		width: calc( 100% - 52px );
+	}
+}
+
+button#wprss-ftp-add-custom-mapping {
+	display: block;
+	margin-bottom: 10px;
+}
+
+
+/* CUSTOM FIELDS META DESCRIPTION */
+#wprss-ftp-extraction-rules-desc,
+#wprss-ftp-custom-fields-desc {
+	list-style: initial !important;
+	margin-left: 18px;
+}
+#wprss-ftp-extraction-rules-desc > li,
+#wprss-ftp-custom-fields-desc > li {
+	margin-bottom: 10px;
+}
+
+
+/* NAMESPACE DETECTOR */
+#wprss-ftp-namespace-detector-refresh {
+	margin-top: 10px;
+	display: block !important;
+}
+#wprss-ftp-namespace-detector-results {
+	padding: 10px 0;
+}
+#wprss-ftp-namespace-detector-results .fa-check {
+	color: green;
+}
+
+#wprss-ftp-url-shortening-metabox table tr > th {
+	display: none;
+}
+
+
+/* Authors radio styles */
+.ftp-author-using-in-feed {
+	display: block;
+	line-height: 25px;
+}
+.ftp-author-using-in-feed:not(:last-child) {
+	margin-bottom: 15px;
+}
+.ftp-author-using-in-feed > input[type="radio"] {
+	vertical-align: text-bottom;
+}
+.ftp-author-using-in-feed > input[type="radio"] + label {
+	margin-right: 10px;
+}
+
+span.wprss-ftp-authors-hide-if-using-existing {
+	display: block;
+	width: 480px;
+	padding: 10px 0;
+	margin-top: 10px;
+	border-top: 1px solid #ddd;
+}
+
+tr.wprss-ftp-authors-hide-if-using-existing
+span.wprss-ftp-authors-hide-if-using-existing {
+	padding: 0;
+	margin: 0;
+	border: 0 solid transparent;
+}
