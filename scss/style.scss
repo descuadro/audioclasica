@@ -1,0 +1,34 @@
+/*!
+Theme Name: Audioclasik
+Theme URI: themeURI
+Author: themeAuthor
+AuthorURI: authorURI
+Description: themeDescription
+Version: 1.2
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: themeTextDomain
+*/
+
+@import 'helpers/base-styles';
+@import 'modular-scale';
+@import 'vendor/marka';
+
+@import 'core/vars';
+@import 'core/fixins';
+@import 'core/site';
+@import 'core/fonts';
+@import 'core/type';
+
+@import 'elements/buttons';
+@import 'elements/logo';
+@import 'elements/navicon';
+
+@import 'components/header';
+@import 'components/nav';
+@import 'components/catBanner';
+@import 'components/golden-layout';
+
+@import 'vendor/naver';
+
+@import 'modules/story';

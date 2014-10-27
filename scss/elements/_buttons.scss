@@ -1,0 +1,15 @@
+/*
+
+	Buttons
+
+*/
+
+button {
+	&:hover,
+	&:active,
+	&:target,
+	&:focus {
+		outline: none;
+		border: none;
+	}
+}

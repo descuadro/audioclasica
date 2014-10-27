@@ -1,0 +1,130 @@
+/*
+
+Fonts
+
+*/
+
+
+$acFontPath: '/fonts/';
+
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextLight.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextLight.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextLight.svg#ca7a28740705ccc665b696e24f8db558') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  300;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextLightOblique.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextLightOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextLightOblique.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextLightOblique.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextLightOblique.svg#63210c1d51ebcd35d06904dac4f415fa') format('svg'); /* Legacy iOS */
+
+  font-style:   oblique;
+  font-weight:  300;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextStandard.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextStandard.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextStandard.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextStandard.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextStandard.svg#55d7e7cd5f642bcf9fa24bfe1e8d7e3c') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextStandardOblique.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextStandardOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextStandardOblique.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextStandardOblique.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextStandardOblique.svg#8728fd0eba12bbf359ad3bc47aa09bf3') format('svg'); /* Legacy iOS */
+
+  font-style:   oblique;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextMedium.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextMedium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextMedium.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextMedium.svg#1d5a248930ffa10472b957bb2546a7fd') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextMediumOblique.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextMediumOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextMediumOblique.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextMediumOblique.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextMediumOblique.svg#effed88328c61cabce03cf72504bf57a') format('svg'); /* Legacy iOS */
+
+  font-style:   oblique;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBold.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBold.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBold.svg#ad48bc3a34e2884a298c2917a92f06bb') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  600;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBoldOblique.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBoldOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBoldOblique.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBoldOblique.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBoldOblique.svg#a5a415ff1d58c9c596bb63d31c30e743') format('svg'); /* Legacy iOS */
+
+  font-style:   oblique;
+  font-weight:  600;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBlack.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBlack.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBlack.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBlack.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBlack.svg#8e3fc7708fc65b6092b7e9c6b56c1485') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBlackOblique.eot'); /* IE9 Compat Modes */
+  src: url('#{$acFontPath}Typetanic Fonts - TransatTextBlackOblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBlackOblique.woff') format('woff'), /* Modern Browsers */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBlackOblique.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$acFontPath}Typetanic Fonts - TransatTextBlackOblique.svg#2b8f9abbb582c26298657238b7aaefac') format('svg'); /* Legacy iOS */
+
+  font-style:   oblique;
+  font-weight:  700;
+}
+

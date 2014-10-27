@@ -1,0 +1,94 @@
+/*
+
+Vars
+
+*/
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $headingFont;
+	font-style: normal;
+}
+
+h1, .h1 {
+   font-weight: 700;
+   font-size: 4.236em;
+   font-size: ms(3);
+   line-height: 1.1em;
+   margin: 0px 0px 0.38em 0px;
+}
+
+h2, .h2 {
+   font-weight: 700;
+   font-size: ms(2);
+   line-height: 1.25em;
+   margin: 0px 0px 0.44em 0px;
+}
+
+h3, .h3 {
+   font-weight: 700;
+   font-size: 2em;
+   line-height: 1.3em;
+   margin: 0px 0px 0.24em 0px;
+}
+
+h4, .h4 {
+   font-weight: 700;
+   font-size: ms(1);
+   margin: 0px 0px 0.38em 0px;
+   line-height: 1.3em;
+}
+
+h5, .h5 {
+   font-weight: 500;
+   font-size: $bodyFontSize2;
+   line-height: 1.438em;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   margin: 0px 0px 1em 0px;
+}
+
+h6, .h6 {
+   font-weight: 700;
+   font-size: ms(-1);
+   line-height: 1.438em;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   margin: 0px 0px 1.62em 0px;
+
+   .author {
+   	font-weight: 500;
+   }
+}
+
+p {
+   margin-bottom: 1.24em;
+}
+
+a,
+a:visited {
+	color: inherit;
+
+   header[role="banner"] &,
+   nav[role="navigation"] & {
+      text-decoration: none;
+   }
+}
+
+a:focus,
+a:active,
+a:target {
+   outline: none;
+}
+
+ul,
+ol {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+}
+

@@ -1,0 +1,28 @@
+/*
+
+	Navicon Transformicon
+
+*/
+
+.transformicon {
+
+  margin: 0 1em;
+  border:none;
+  background:none;
+
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+
+  opacity: .8;
+
+  &:hover { opacity: 1; }
+
+
+  // Insiders
+
+  i {
+    top: 0;
+    left: 0;
+  }
+}

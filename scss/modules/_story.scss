@@ -1,0 +1,195 @@
+/*
+
+Article
+
+*/
+
+@mixin borderIt() {
+	content: "";
+	position: absolute;
+	top: 0;
+	background: $acBorderColor;
+	left: $paddingH;
+	right: $paddingH;
+
+	left: 0;
+	right: 0;
+	height: 1px;
+
+	z-index: index($boysBandIndex, justinBieber);
+}
+
+.home-feed {
+	@extend .clearfix;
+}
+
+.story {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+
+	.feed & {
+		text-align: left;
+		padding: ms(1) $paddingH;
+		overflow: hidden;
+
+		header {
+			position: relative;
+			z-index: index($boysBandIndex, justinBieber);
+		}
+
+		a { text-decoration: none; }
+
+		h1 {
+			@extend .h4;
+			font-weight: 500;
+			margin-bottom: ms(-3);
+			line-height: 1em;
+		}
+
+		@media (min-width: $tablet) {
+
+			h1 {
+				font-weight: 600;
+				font-size: ms(2)
+			}
+
+			&.featured {
+				h1 {
+					//font-size: ms(3);
+					//margin-bottom: ms(-4);
+				}
+				h6 { font-size: $bodyFontSize2; }
+			}
+		}
+
+
+
+	}
+	.feed.image-based & {
+		color: white;
+
+		img {
+			position: absolute;
+			@include position(0,0,0,0);
+			height: 100%;
+		}
+
+		// Border
+
+		border-right: 1px solid whitesmoke;
+		border-bottom: 1px solid whitesmoke;
+
+		// Before tablet size
+
+		@media (max-width: $tablet) {
+			&.featured { padding: 25vh $paddingH; }
+
+			&.noticias:after { @include overlayDatShit(black, .25) }
+			&.articulos:after { @include overlayDatShit(black, .25) }
+			&.entrevistas:after { @include overlayDatShit(black, .25) }
+			&.conciertos:after { @include overlayDatShit(black, .25) }
+			&.criticas:after { @include overlayDatShit(black, .25) }
+			&.opinion:after { @include overlayDatShit(black, .25) }
+			&.tendencias:after { @include overlayDatShit(black, .25) }
+
+			.home-feed & {
+				&.noticias:after { @include overlayDatShit(darken($noticias, 10%), .5) }
+				&.articulos:after { @include overlayDatShit(darken($articulos, 10%), .5) }
+				&.entrevistas:after { @include overlayDatShit(darken($entrevistas, 10%), .5) }
+				&.conciertos:after { @include overlayDatShit(darken($conciertos, 10%), .5) }
+				&.criticas:after { @include overlayDatShit(darken($criticas, 10%), .5) }
+				&.opinion:after { @include overlayDatShit(darken($opinion, 10%), .5) }
+				&.tendencias:after { @include overlayDatShit($tendencias, .5) }
+			}
+		}
+		@media (min-width: $tablet) {
+			&:after {
+				@include overlayDatShit(black);
+				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+			}
+
+
+			// Colorizing
+
+			&.noticias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
+			&.articulos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
+			&.entrevistas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
+			&.conciertos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
+			&.criticas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
+			&.opinion:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
+			&.tendencias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
+
+			.home-feed & {
+
+				&.noticias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($noticias, 10%), .2)); }
+				&.articulos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($articulos, 10%), .2)); }
+				&.entrevistas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($entrevistas, 10%), .2)); }
+				&.conciertos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($conciertos, 10%), .2)); }
+				&.criticas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($criticas, 10%), .2)); }
+				&.opinion:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($opinion, 10%), .2)); }
+				&.tendencias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out($tendencias, .2)); }
+			}
+		}
+
+		.no-touch & {
+
+			&:before {
+				@include overlayDatShit(black, .9);
+				z-index: index($boysBandIndex, justinBieber);
+			}
+
+
+			// For Effect
+			img { transition: transform $acTransSpeed $acTransEasing; }
+			&:before { transition: background-color $acTransSpeed $acTransEasing; }
+
+			&:hover {
+				img { transform: translateX(-2%) scale(1.05); }
+				&:before { background-color: rgba(0,0,0,0); }
+			}
+		}
+	}
+
+	.feed.text-based & {
+		border-top: 1px solid $acBorderColor;
+		display: table;
+		width: 100%;
+		header,
+		.image {
+			display: table-cell;
+		}
+
+		header {
+			padding-left: 6.18%;
+		}
+
+		.image {
+			width: 23.6%;
+			max-width: 280px;
+			margin-right: 6.18%;
+			img { width: 100%; }
+		}
+
+		@media (max-width: $tablet) {
+			header,
+			.image { vertical-align: top; }
+		}
+	}
+
+	.details {
+		a {
+			text-decoration: none;
+
+			&:before {
+				content: ' / ';
+				opacity: .6;
+			}
+		}
+	}
+}
+
+.image-based {
+	display: none;
+}

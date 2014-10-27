@@ -1,0 +1,245 @@
+/*
+
+Golden Layout
+
+*/
+
+
+// Golden Columni
+$column: 68.54%;
+$column2: 76.4%;
+
+$goldenBreakpoint: 1023px;
+$hugeBreakpoint: 1230px;
+
+$bannerWidth: 6.18%;
+$golden: 61.8%;
+
+$padding1: 6.18%;
+$padding2: 11.089%;
+
+#nav,
+nav.filter {
+	a, p {
+		padding: ms(-2) 0;
+		span { padding-left: 1em; }
+	}
+
+	ul { padding: 1em 0; }
+	.legal a { padding: ms(-3) 0; }
+	.nav-block a { padding: 1em 0; }
+
+	a,p,
+	.legal a,
+	.nav-block a {
+		padding-left: $padding1;
+		padding-right: $padding1;
+	}
+}
+
+header[role="banner"],
+.catBanner header { padding: ms(-1) $paddingH; }
+
+
+@media (max-width: $goldenBreakpoint) {
+
+	header[role="banner"],
+	.catBanner { z-index: index($boysBandIndex, jonasBrothers); }
+
+	nav[role="navigation"] {
+		position: absolute;
+		header { @include visually-hidden(); }
+	}
+
+	.catBanner {
+		@include maxHeighter();
+		button { @include visually-hidden; }
+	}
+}
+
+@media (min-width: $goldenBreakpoint) {
+
+	.head-wrapper {
+		width: 100% - $column;
+		height: 100%;
+
+		position: fixed;
+		top: 0; left: 0;
+	}
+
+	#nav {
+		position: fixed;
+		height: 100%;
+		width: 100% - $column;
+
+		header {
+			@include clearfix;
+			padding: 1em;
+			background: whitesmoke;
+			border-bottom: 1px solid $acBorderColor;
+
+			h1 {
+				font-size: 2em;
+				margin-bottom: 0;
+				width: 50%;
+				white-space: nowrap;
+				float: left;
+			}
+
+			button {
+				float: right;
+				margin: .35em 0 0;
+			}
+		}
+	}
+
+	nav.filter {
+		height: 100% - $golden;
+		ul { min-height: 100%; }
+	}
+
+	#nav,
+	nav.filter {
+		a,p,
+		.legal a,
+		.nav-block a,
+		header {
+			padding-left: $padding2;
+			padding-right: $padding2;
+
+			h1 { font-size: ms(1); }
+		}
+	}
+
+	main[role="main"] { margin-left: 100%-$column; }
+
+	header[role="banner"] {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: $bannerWidth;
+		padding: 1em;
+		background: whitesmoke;
+		border-right: 1px solid $acBorderColor;
+
+		button {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+			width: 100%;
+			margin: 0 !important;
+			margin-top: 2em !important;
+			span {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		h1 {
+			transform: rotate(270deg);
+			position: absolute;
+			bottom: ms(3);
+			bottom: 3.31em;
+			left: 0;
+			width: 1em;
+			margin: 0;
+			width: 100%;
+		}
+
+		display: none;
+	}
+
+	.catBanner {
+		height: 100%;
+		border-right: 1px solid $acBorderColor;
+
+		header {
+			height: $golden;
+			padding: 4em $padding2 ms(1);
+
+			.flexbox & {
+				display: flex;
+
+			  // To the Left
+			  align-items: flex-end;
+			  justify-content: flex-start;
+			}
+
+			border-bottom: 1px solid $acBorderColor;
+			background: whitesmoke;
+		}
+
+		.navicon {
+			position: absolute;
+			top: 1em;
+			margin: 0;
+			left: $padding2;
+
+			&:after {
+				content: 'Menú';
+				position: absolute;
+				top: 6px;
+				left: 30px;
+				padding-left: 1em;
+			}
+		}
+	}
+
+	.sorticon { @include visually-hidden(); }
+
+	/*
+	html,
+	body,
+	main[role="main"],
+	.feed { height: 100%; }
+	*/
+
+	.feed.image-based .story {
+		@include square(50%);
+		float: left;
+
+		border-right: 1px solid $acBorderColor;
+
+		&.featured {
+			width: 100%;
+			height: 75%;
+			clear: left;
+			//border-color: transparent;
+		}
+
+
+		// Layout
+
+		.no-flexbox & {
+			padding: (25vh)/2 $paddingH;
+			&.featured { padding: (50vh)/2 $paddingH; }
+		}
+
+		.flexbox & {
+			display: flex;
+
+		  // To the Left
+		  align-items: flex-end;
+		  justify-content: flex-start;
+		}
+
+	}
+
+}
+
+@media (min-width: $hugeBreakpoint) {
+
+	.head-wrapper,
+	#nav { width: 100% - $column2; }
+
+	#nav header {
+		.navicon { margin-top: .28em; }
+	}
+
+	main[role="main"] {
+		margin-left: 100 - $column2;
+	}
+}

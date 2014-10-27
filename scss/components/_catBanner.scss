@@ -1,0 +1,31 @@
+/*
+
+Category Banner
+
+*/
+
+.catBanner {
+
+	background: whitesmoke;
+
+	h1 {
+		@extend .h2;
+		margin-bottom: 0;
+	}
+	h2 {
+		@extend .h5;
+		margin-bottom: -(ms(-1));
+	}
+
+	p {
+		font-size: .8em;
+		line-height: 1.5em;
+	}
+
+	h1 + p { margin-top: ms(-2); }
+	*:last-child { margin-bottom: 0; }
+
+	.navicon:after { @extend .h5; }
+}
+
+nav.filter { width: 100%; }

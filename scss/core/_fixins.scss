@@ -1,0 +1,222 @@
+/*
+
+Fixins
+
+*/
+
+
+// Sizing Functions
+
+@mixin square($value: 1em) {
+	width: $value;
+	height: $value;
+}
+
+@mixin size($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+@mixin heighter( $value ) {
+	height: $value;
+}
+
+@mixin position( $top, $right, $bottom, $left ) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin maxHeighter() {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height $acTransSpeed $acTransEasing;
+	backface-visibility: hidden;
+
+	&.is-open { max-height: 9999px; }
+}
+
+// Other
+
+@mixin justifyCenter() {
+	// Justified, vertically aligned elements
+
+	text-align: justify;
+
+	> * {
+		margin: 0;
+
+		display: inline-block;
+		vertical-align: middle;
+
+		&:first-child {
+			height: 100%;
+			&:before {
+			    content: '';
+			    display: inline-block;
+			    vertical-align: middle;
+			    height: 100%;
+			}
+		}
+	}
+
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+
+// Backgrounds and Overlays
+
+@mixin bgOverlay() {
+	position: relative;
+	// Background, Overlay
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		@include position(0,0,0,0);
+		@include square(100%);
+		z-index: index($boysBandIndex, justinBieber);
+
+	}
+	//&:before { @media all and (min-width: em(1180)) { background-attachment: fixed !important; } }
+	//@media all and (min-width: em(1180)) { background-attachment: fixed !important; }
+	&:after { z-index: index($boysBandIndex, jonasBrothers); }
+}
+
+
+@mixin overlayDatShit( $color: black, $transparency: .5 ) {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include square(100%);
+	background: fade-out($color, $transparency);
+	z-index: 0;
+}
+
+@mixin centerIt() {
+
+	.wrapper {
+		display: table;
+		@include square(100%);
+	}
+	.inner-wrapper {
+		display: table-cell;
+		vertical-align: middle;
+		z-index: 1;
+		position: relative;
+	}
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin text-shadow($shadow: 2px 1px 6px fade-out(black, .4)) { text-shadow: $shadow; }
+.text-shadow { @include text-shadow(); }
+
+
+@mixin opIn() {
+
+	.fader { transition: 300ms opacity ease-in; }
+	.out { opacity: 0; }
+	.half-out, .half-in { opacity: .5; }
+	.fadeIn { opacity: 1; }
+}
+
+@mixin oped($op: .7) { opacity: $op }
+
+@mixin navPadding() {
+	//padding-top: $mobileNavHeight;
+	@media all and (min-width: $navBreakpoint) {
+		margin-top: $navHeight;
+	}
+}
+
+@mixin linkColor($linkColor) {
+	color: $linkColor;
+	transition: color $yTransSpeed $yTransEasing, border-color $yTransSpeed $yTransEasing;
+	border-bottom: 1px solid $ySuperLightGrey;
+
+	&:hover,
+	&:active {
+		color: darken($linkColor, 10%);
+		border-color: lighten($linkColor, 10%);
+	}
+}
+
+
+
+// Hide Visually
+
+@mixin visually-hidden() {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+body:hover .visually-hidden a,
+body:hover .visually-hidden input,
+body:hover .visually-hidden button {
+	display: none !important;
+}
+%visually-hidden { @include visually-hidden; }
+
+
+
+/* Helper Functions */
+
+@mixin clearfix {
+	// For modern browsers
+	&:before,
+	&:after {
+		content:" ";
+		display:table;
+	}
+
+	&:after { clear:both; }
+
+	// For IE 6/7 (trigger hasLayout)
+	& { *zoom:1; }
+}
+.clearfix { @include clearfix(); }
+
+@function em($pixels, $context: 16) {
+  @return #{$pixels/$context}em;
+}
+
+
+// Other
+
+.is-disabled {
+	cursor: not-allowed;
+	user-select: none;
+}
+
+@mixin icon($content, $size: 14px) {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	content: $content;
+	font-size: $size;
+}
+
+@mixin gradient($to: bottom, $start: transparent, $end: rgba(0,0,0,0.65)) {
+	background: linear-gradient(to $to, $start 0%, $end 100%);
+}

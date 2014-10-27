@@ -1,0 +1,91 @@
+/*
+
+Navigation
+
+*/
+
+#nav,
+nav.filter {
+	background: whitesmoke;
+	ul { background: whitesmoke; }
+	z-index: index($boysBandIndex, jonasBrothers);
+
+	a, p {
+		@extend .clearfix;
+		font-weight: 500;
+		display: block;
+		margin: 0;
+		text-decoration: none;
+
+		span {
+			@extend .h5;
+		}
+	}
+
+	a {
+		&:before {
+			@include icon("\f0c8");
+			position: relative;
+			top: -1px;
+			width: 1em;
+
+			//@include visually-hidden;
+		}
+	}
+
+	ul { border-bottom: 1px solid $acBorderColor; }
+
+	.legal a {
+		span {
+			font-weight: 400;
+			text-transform: none;
+			letter-spacing: 0;
+			opacity: .8;
+		}
+		&:before { visibility: hidden; }
+	}
+
+	.nav-block { border-bottom: 1px solid $acBorderColor; }
+}
+
+/* Off Canvas Layout */
+
+$distance: 100%;
+
+.js {
+
+	#nav {
+		@include position($mobileHeaderHeight,0,0,0);
+
+		transition: transform $acTransSpeed;
+		transform: translateX(-$distance);
+	}
+
+	.navOpen {
+
+		#nav {
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+			transform: translateX(0);
+		}
+	}
+
+@media (min-width: $navBr) { #nav { top: 0; } }
+
+}
+
+
+
+#nav a {
+	&.top-reads:before { @include icon("\f06e") }
+
+	&.noticias:before { @include icon("\f1ea") }
+	&.articulos:before { @include icon("\f040") }
+	&.entrevistas:before { @include icon("\f086") }
+	&.conciertos:before { @include icon("\f130") }
+	&.criticas:before { @include icon("\f0e3") }
+	&.opinion:before { @include icon("\f140") }
+	&.tendencias:before { @include icon("\f06d") }
+
+	&.quienes-somos:before { visibility: hidden; color: transparent; }
+}

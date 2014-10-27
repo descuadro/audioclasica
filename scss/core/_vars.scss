@@ -1,0 +1,71 @@
+/*
+
+Vars
+
+*/
+
+//Body Copy
+$headingFont: 'futura-pt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bodyFont: 'Transat Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bodyFontWeight: 400 !default;
+
+$bodyFontSize1: 21px;
+$bodyFontSize2: 16px;
+
+//Colors
+$bodyColor: #333;
+$headingColor: #333;
+
+
+$acBorderColor: gainsboro;
+
+$acPalette1: #703030;
+$acPalette2: #2F343B;
+$acPalette3: #7E827A;
+$acPalette4: #E3CDA4;
+$acPalette5: #C77966;
+$acPalette6: white;
+$acPalette7: black;
+$acColorList: $acPalette1 $acPalette2 $acPalette3 $acPalette4 $acPalette5 $acPalette6 $acPalette7;
+
+$noticias: $acPalette1;
+$articulos: $acPalette2;
+$entrevistas: $acPalette3;
+$conciertos: $acPalette4;
+$criticas: $acPalette5;
+$opinion: $acPalette6;
+$tendencias: $acPalette7;
+
+
+// Transitional shit
+$acTransSpeed: .35s;
+$acTransEasing: ease-out;
+
+
+
+//Other
+$padding: ms(2);
+$paddingH: 6.18%;
+$mobileHeaderHeight: 58px;
+
+// Breakpoints
+$mainBr: 1025px;
+$tablet: 767px;
+$navBr: $tablet;
+
+
+/* Boy's Band Z-Index Scale */
+$boysBandIndex: justinBieber, jonasBrothers, backstreetBoys, nsync, takeThat;
+
+/*
+Usage:
+
+	element {
+		z-index: index($boysBandIndex, justinBieber);
+	}
+*/
+
+
+
+
+
