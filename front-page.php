@@ -21,7 +21,7 @@ get_header(); ?>
 						<h1 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 						<h6 class="entry-details">
 							<span class="entry-author"><?php the_author() ?></span>
-							<a href="#" class="category"><?php the_category() ?></a>
+							<a href="#" class="category"><?php the_category('/ ') ?></a>
 						</h6>
 					</header><!-- .entry-header -->
 				</article>
