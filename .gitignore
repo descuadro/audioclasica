@@ -22,3 +22,4 @@ Thumbs.db
 *.sass-cache
 *.ruby-version
 node_modules
+_bower_components
