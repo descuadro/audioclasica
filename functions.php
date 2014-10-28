@@ -51,14 +51,15 @@ add_action( 'after_setup_theme', 'themeFunction_setup' );
 /* SIDEBARS & WIDGET AREAS
  ========================== */
 function themeFunction_widgets_init() {
-	register_sidebar( array(
-		'name' => __( 'Sidebar', 'themeTextDomain' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<div class="head-wrapper"><header role="banner"><h1 class="site-logo">Audioclásica</h1><button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon"></button><button type="button" role="button" aria-label="Toggle Sorting" class="transformicon sorticon"></button></header><section class="catBanner"><button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon"></button><header><div class="wrapper">',
-		'after_widget' => '</div> </header> <nav class="filter"> <ul> <li><a href="#"><span>Filter 1</span></a></li> <li><a href="#"><span>Filter 2</span></a></li> <li><a href="#"><span>Filter 3</span></a></li> <li><a href="#"><span>Filter 4</span></a></li> <li><a href="#"><span>Filter 5</span></a></li> </ul> </nav> </section> <nav role="navigation" id="nav"> <header> <h1 class="site-logo">Audioclásica</h1> <button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon"> </button> </header> <div class="nav-block"> <a href="#" class="toggle top-reads"><span>Top Reads</span></a> </div> <ul id="main-nav"> <li><a href="#" class="noticias"><span>Noticias</span></a></li> <li><a href="#" class="articulos"><span>Artículos</span></a></li> <li><a href="#" class="entrevistas"><span>Entrevistas</span></a></li> <li><a href="#" class="conciertos"><span>Conciertos</span></a></li> <li><a href="#" class="criticas"><span>Críticas</span></a></li> <li><a href="#" class="opinion"><span>Opinión</span></a></li> <li><a href="#" class="tendencias"><span>Tendencias</span></a></li> </ul> <div class="nav-block"> <a href="#" class="toggle quienes-somos"><span>Quiénes Somos</span></a> </div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	) );
+	register_sidebar(array(
+		'name' => 'Banner1',
+		'id'   => 'banner-1',
+		'description'   => 'This is a widgetized area.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
 }
 add_action( 'widgets_init', 'themeFunction_widgets_init' );
 
