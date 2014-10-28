@@ -15,10 +15,8 @@
 			</button>
 		</header>
 
-		<ul id="main-nav">
-			<?php 
-
-			$args = array(
+		<ul id="categories">
+			<?php $args = array(
 				'type'                     => 'post',
 				'child_of'                 => 0,
 				'parent'                   => '',
@@ -32,13 +30,12 @@
 				'taxonomy'                 => 'category',
 				'title_li'    				=> __(''),
 				'pad_counts'               => false 
-
 			); ?>
 			<?php wp_list_categories( $args ); ?> 
 
 		</ul>
 
-		
+		<div class="pages">
 			<?php $args = array(
 			'authors'      => '',
 			'child_of'     => 0,
@@ -56,10 +53,15 @@
 		        'sort_order'   => '',
 			'title_li'     => __(''), 
 			'walker'       => ''
-		); ?>
-			<?php wp_list_pages( $args ); ?> 
-		
+			); ?>
+			<?php wp_list_pages( $args ); ?>
+		</div>
 
+			<ul class="links">
+
+				<?php get_links('-1', '<li><span>', '</span></li>', '', FALSE, 'id', FALSE,
+				FALSE, -1, TRUE, TRUE); ?>
+			</ul>
 	</nav>
 </div>
 
