@@ -8,22 +8,35 @@
  * @package themeHandle
  */
 
+$post_classes = array(
+	'story',
+);
+
 get_header(); ?>
 
-<section id="primary" role="main">
+<section class="cat-feed feed text-based">
 
 	<?php if ( have_posts() ) : ?>
 
-		<?php get_template_part( 'inc/archive-header' ); ?>
-
 		<?php /* Start the Loop */ ?>
+
 		<?php while ( have_posts() ) : the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
 
-			<?php get_template_part( 'content', get_post_format() ); ?>
+			<div class="image">
+				<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+    	</div>
 
-		<?php endwhile; ?>
+			<header class="entry-header">
+				<h1 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+				<h6 class="entry-details">
+					<span class="entry-author"><?php the_author() ?></span>
+					<?php the_category('/ ') ?>
+				</h6>
+			</header><!-- .entry-header -->
 
-		<?php get_template_part( 'inc/pagination' ); ?>
+		</article><!-- #post-<?php the_ID(); ?> -->
+	<?php endwhile; // end of the loop. ?>
 
 	<?php else : ?>
 

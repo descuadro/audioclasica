@@ -12,6 +12,9 @@ $post_classes = array(
 get_header(); ?>
 
 <section class="home-feed feed text-based">
+
+	<?php /* Start the Loop */ ?>
+
 	<?php while ( have_posts() ) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
 
@@ -29,6 +32,7 @@ get_header(); ?>
 
 		</article><!-- #post-<?php the_ID(); ?> -->
 	<?php endwhile; // end of the loop. ?>
+
 </section>
 
 <!-- #primary -->
