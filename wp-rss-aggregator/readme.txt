@@ -1,4 +1,4 @@
-=== WP RSS Aggregator ===
+=== WP RSS Aggregator testing ===
 Contributors: jeangalea, Mekku, xedin.unknown, markzahra
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X9GP6BL4BLXBJ
 Plugin URI: http://www.wprssaggregator.com
