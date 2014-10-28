@@ -48,6 +48,8 @@ Article
 			line-height: 1em;
 		}
 
+		h6 { margin-left: 3px; }
+
 		@media (min-width: $tablet) {
 
 			h1 {
@@ -177,15 +179,17 @@ Article
 			.image { vertical-align: top; }
 		}
 	}
+}
 
-	.details {
-		a {
-			text-decoration: none;
 
-			&:before {
-				content: ' / ';
-				opacity: .6;
-			}
+.entry-details {
+	background: red;
+	a {
+		text-decoration: none;
+
+		&:before {
+			content: ' / ';
+			opacity: .6;
 		}
 	}
 }
