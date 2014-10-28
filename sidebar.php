@@ -10,7 +10,6 @@
 	<nav role="navigation" id="nav">
 		<header>
 			<h1 class="site-logo">Audioclásica</h1>
-
 			<button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon">
 			</button>
 		</header>
@@ -32,7 +31,6 @@
 				'pad_counts'               => false 
 			); ?>
 			<?php wp_list_categories( $args ); ?> 
-
 		</ul>
 
 		<div class="pages">
@@ -57,14 +55,13 @@
 			<?php wp_list_pages( $args ); ?>
 		</div>
 
-			<ul class="links">
+		<ul class="links">
 
-				<?php get_links('-1', '<li><span>', '</span></li>', '', FALSE, 'id', FALSE,
+			<?php get_links('-1', '<li><span>', '</span></li>', '', FALSE, 'id', FALSE,
 				FALSE, -1, TRUE, TRUE); ?>
-			</ul>
+		</ul>
 	</nav>
 </div>
-
 
 <!-- #secondary .widget-area -->
 
