@@ -62,6 +62,5 @@
 		</ul>
 	</nav>
 </div>
-tester
 <!-- #secondary .widget-area -->
 
