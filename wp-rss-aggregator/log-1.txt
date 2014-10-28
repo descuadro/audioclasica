@@ -39,3 +39,13 @@ Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Fe
 [23-09-2014 06:01:56] WPRSS > wprss_ftp_media_sideload_image:
 Error downloading image "http://feeds.feedburner.com/~r/Pianist-Magazine/News/Features/~4/v0_QKOY9hBQ" for post #44: Unable to create directory wp-content/uploads/2014/05. Is its parent directory writable by the server?
 
+[28-10-2014 05:56:55] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://www.independent.co.uk/arts-entertainment/classical/?service=rss". fsockopen error: php_network_getaddresses: getaddrinfo failed: Name or service not known
+[28-10-2014 05:58:20] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://pitchfork.com/rss/reviews/best/tracks/". fsockopen error: php_network_getaddresses: getaddrinfo failed: Name or service not known
+[28-10-2014 05:58:46] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://www.allaboutjazz.com/rss_articles.xml". fsockopen error: php_network_getaddresses: getaddrinfo failed: Name or service not known
+
+[28-10-2014 05:59:45] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://feeds.feedburner.com/Pianist-Magazine/News/Features". fsockopen error: php_network_getaddresses: getaddrinfo failed: Name or service not known
+
