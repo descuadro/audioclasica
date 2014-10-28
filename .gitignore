@@ -9,6 +9,7 @@
 *.zip
 *.vi
 *~
+.gitignore
 
 #OS folders
 .DS_Store
@@ -23,3 +24,4 @@ Thumbs.db
 *.ruby-version
 node_modules
 _bower_components
+bower_components
