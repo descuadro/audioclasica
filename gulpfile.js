@@ -12,10 +12,10 @@ var gulp = require('gulp'),
 
 var imgSrc = 'assets/images/originals/*';
 var imgDest = 'assets/images';
-    
+
 gulp.task('styles', function(){
   return gulp.src(['scss/*.scss',
-                   'scss/**/*.scss'], 
+                   'scss/**/*.scss'],
             {base: 'scss/'} )
       .pipe(plumber())
 	    .pipe(sass({ style: 'expanded' }))
@@ -40,12 +40,12 @@ gulp.task('watch', function() {
       if (err) {
         return console.log(err);
       }
-  
+
       // Watch .scss files
       gulp.watch('scss/*.scss', ['styles']);
       gulp.watch('scss/**/*.scss', ['styles']);
       gulp.watch('assets/images/originals/**', ['images']);
-  
+
     });
 
 });

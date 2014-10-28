@@ -36,7 +36,6 @@
 
     <?php // Lets other plugins and files tie into our theme's <head>:
     wp_head(); ?>
-        <link rel="stylesheet" href="/styles/main.9b03.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="//use.typekit.net/hxo6ukw.js"></script>
