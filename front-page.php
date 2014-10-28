@@ -11,8 +11,6 @@ $post_classes = array(
 
 get_header(); ?>
 
-<main role="main" class="home">
-
 <section class="home-feed feed text-based">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>

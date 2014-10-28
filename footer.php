@@ -8,9 +8,7 @@
  */
 ?>
 
-	</div><!-- #main -->
-
-</div><!-- #page -->
+	</main><!-- #main -->
 
 <?php wp_footer(); ?>
 
