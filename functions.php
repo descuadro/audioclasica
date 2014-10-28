@@ -52,8 +52,8 @@ add_action( 'after_setup_theme', 'themeFunction_setup' );
  ========================== */
 function themeFunction_widgets_init() {
 	register_sidebar(array(
-		'name' => 'Banner1',
-		'id'   => 'banner-1',
+		'name' => 'Categorias',
+		'id'   => 'sidebar-1',
 		'description'   => 'This is a widgetized area.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
@@ -129,19 +129,7 @@ include('inc/functions/customizations.php');
 /* AUDIOCLASIK BANNERS
  ========================== */
 
- if (function_exists('register_sidebar')) {
-
-	register_sidebar(array(
-		'name' => 'Banner1',
-		'id'   => 'banner-1',
-		'description'   => 'This is a widgetized area.',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
-	));
-
-}
+ 
 
 //Custom settings in associative array
 

@@ -54,3 +54,6 @@
 	</header><!-- #branding -->
 
     <main role="main" id="main">
+
+    <!-- includes -->
+    <?php get_sidebar(); ?>
