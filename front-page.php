@@ -4,7 +4,7 @@
  *
  * @package themeHandle
  */
-
+$image_based = true;
 $post_classes = array( 'story', );
 get_header(); ?>
 
