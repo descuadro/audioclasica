@@ -67,7 +67,15 @@ $distance: 100%;
 		}
 	}
 
-	@media (min-width: $navBr) { #nav { top: 0; } }
+	@media (min-width: $goldenBreakpoint) {
+		#nav { top: 0; }
+
+		.home #nav {
+				overflow-y: scroll;
+				-webkit-overflow-scrolling: touch;
+				transform: translateX(0);
+			}
+	}
 
 }
 

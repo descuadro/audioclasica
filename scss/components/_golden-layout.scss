@@ -44,10 +44,11 @@ header[role="banner"],
 @media (max-width: $goldenBreakpoint) {
 
 	header[role="banner"],
-	.catBanner { z-index: index($boysBandIndex, jonasBrothers); }
+	.catBanner { z-index: index($boysBandIndex, backstreetBoys); }
 
 	nav[role="navigation"] {
 		position: absolute;
+
 		header { @include visually-hidden(); }
 	}
 
