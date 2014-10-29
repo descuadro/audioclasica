@@ -23,9 +23,9 @@ get_header(); ?>
     	</div>
 
 			<header class="entry-header">
-				<h1 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-				<h6 class="entry-details">
-					<span class="entry-author"><?php the_author() ?></span>
+				<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+				<h6 class="story-details">
+					<span class="story-author"><?php the_author() ?></span>
 					<?php the_category('/ ') ?>
 				</h6>
 			</header><!-- .entry-header -->

@@ -37,6 +37,8 @@ Article
 		header {
 			position: relative;
 			z-index: index($boysBandIndex, justinBieber);
+
+			*:last-child { margin: 0 !important; }
 		}
 
 		a { text-decoration: none; }
@@ -53,7 +55,7 @@ Article
 		@media (min-width: $tablet) {
 
 			h1 {
-				font-weight: 600;
+				//font-weight: 600;
 				font-size: ms(2)
 			}
 
@@ -156,33 +158,36 @@ Article
 
 	.feed.text-based & {
 		border-top: 1px solid $acBorderColor;
-		display: table;
-		width: 100%;
-		header,
-		.image {
-			display: table-cell;
-		}
-
-		header {
-			padding-left: 6.18%;
-		}
 
 		.image {
-			width: 23.6%;
-			max-width: 280px;
-			margin-right: 6.18%;
-			img { width: 100%; }
+			margin: 0 auto;
+			img {
+				width: 100%;
+				height: auto;
+			}
 		}
 
-		@media (max-width: $tablet) {
+		@media (min-width: 540px) {
+			display: table;
+			width: 100%;
 			header,
-			.image { vertical-align: top; }
+			.image {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.image {
+				width: 23.6%;
+				max-width: 280px;
+			}
+			header {
+				padding-left: 6.18%;
+			}
 		}
 	}
 }
 
 
-.entry-details {
+.story-details {
 
 
 	a {
