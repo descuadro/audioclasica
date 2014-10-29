@@ -76,12 +76,6 @@ Article
 
 		div.image { @extend .visually-hidden; }
 
-		img {
-			position: absolute;
-			@include position(0,0,0,0);
-			height: 100%;
-		}
-
 		// Border
 
 		border-right: 1px solid whitesmoke;
