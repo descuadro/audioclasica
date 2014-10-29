@@ -52,7 +52,7 @@ toggleImage.click(function(e) {
 
 	if ( $('html').hasClass('image-based') ) {
 		$('html').removeClass('image-based').addClass('text-based');
-	};
+	}
 
 	else {
 		$('html').removeClass('text-based').addClass('image-based');
