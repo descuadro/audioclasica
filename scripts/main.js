@@ -8,7 +8,9 @@ var body = $('body');
 
 var navicon = new Marka('.navicon'),
 		sorticon = new Marka('.sorticon'),
-		navOpen = false;
+		navOpen = false,
+
+		toggleimage = $('[data-toggle="image-based"]');
 
 
 
@@ -42,6 +44,20 @@ $('.sorticon').click(function() {
 	}
 });
 
+
+// Text / Image toggling
+
+toggleImage.click(function(e) {
+	if (e) { e.preventDefault(); };
+
+	if ( $('html').hasClass('image-based') ) {
+		$('html').removeClass('image-based').addClass('text-based');
+	};
+
+	else {
+		$('html').removeClass('text-based').addClass('image-based');
+	}
+});
 
 
 /*

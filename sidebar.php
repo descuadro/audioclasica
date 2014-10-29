@@ -16,6 +16,10 @@
 				<?php } ?>
 		</header>
 
+		<div class="nav-block">
+			<a href="#" class="toggle" data-toggle="image-based">Imagen / Texto</a>
+		</div>
+
 		<ul id="categories">
 			<?php $args = array(
 				'type'                     => 'post',
