@@ -5,13 +5,12 @@
  * @package themeHandle
  */
 
-$post_classes = array(
-	'story',
-);
+$post_classes = array( 'story', );
+$image_based = true;
 
 get_header(); ?>
 
-<section class="home-feed feed text-based">
+<section class="home-feed feed <?php if ( $image_based ): ?> image-based <?php else: ?> text-based <?php endif ?>">
 
 	<?php /* Start the Loop */ ?>
 
