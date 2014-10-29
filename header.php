@@ -7,7 +7,7 @@
  * @package themeHandle
  */
 
-$image_based = true;
+global $image_based = true;
 ?>
 
 <!DOCTYPE html>
