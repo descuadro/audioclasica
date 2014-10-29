@@ -74,7 +74,7 @@ Article
 	.image-based & {
 		color: white;
 
-		div.image { @extend .visually-hidden(); }
+		div.image { @extend .visually-hidden; }
 
 		img {
 			position: absolute;
