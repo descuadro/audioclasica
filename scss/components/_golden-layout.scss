@@ -190,44 +190,42 @@ header[role="banner"],
 
 	.sorticon { @include visually-hidden(); }
 
-	/*
-	html,
-	body,
-	main[role="main"],
-	.feed { height: 100%; }
-	*/
+	html.image-based {
+		body,
+		main[role="main"],
+		.feed { height: 100%; }
+	}
 
-	.feed.image-based .story {
-		@include square(50%);
-		float: left;
+	.image-based {
 
-		border-right: 1px solid $acBorderColor;
+		.story {
+			@include square(50%);
+			float: left;
 
-		&.featured {
-			width: 100%;
-			height: 75%;
-			clear: left;
-			//border-color: transparent;
+			border-right: 1px solid $acBorderColor;
+
+			&.featured {
+				width: 100%;
+				height: 75%;
+				clear: left;
+				//border-color: transparent;
+			}
 		}
 
-
 		// Layout
-
-		.no-flexbox & {
+		&.no-flexbox .story {
 			padding: (25vh)/2 $paddingH;
 			&.featured { padding: (50vh)/2 $paddingH; }
 		}
 
-		.flexbox & {
+		&.flexbox .story {
 			display: flex;
 
 		  // To the Left
 		  align-items: flex-end;
 		  justify-content: flex-start;
 		}
-
 	}
-
 }
 
 @media (min-width: $hugeBreakpoint) {

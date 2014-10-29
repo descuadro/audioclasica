@@ -6,11 +6,9 @@
  */
 
 $post_classes = array( 'story', );
-$image_based = true;
-
 get_header(); ?>
 
-<section class="home-feed feed <?php if ( $image_based ): ?> image-based <?php else: ?> text-based <?php endif ?>">
+<section class="home-feed feed">
 
 	<?php /* Start the Loop */ ?>
 

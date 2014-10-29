@@ -71,7 +71,7 @@ Article
 
 
 	}
-	.feed.image-based & {
+	.image-based & {
 		color: white;
 
 		img {
@@ -156,7 +156,7 @@ Article
 		}
 	}
 
-	.feed.text-based & {
+	.text-based & {
 		border-top: 1px solid $acBorderColor;
 
 		.image {
@@ -188,8 +188,6 @@ Article
 
 
 .story-details {
-
-
 	a {
 		text-decoration: none;
 
@@ -198,8 +196,4 @@ Article
 			opacity: .6;
 		}
 	}
-}
-
-.image-based {
-	display: none;
 }

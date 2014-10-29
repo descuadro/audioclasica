@@ -6,6 +6,8 @@
  *
  * @package themeHandle
  */
+
+$image_based = true;
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@
 <html id="ie" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="<?php if ($image_based): ?> image-based <?php else: ?> text-based <?php endif ?>">
 <!--<![endif]-->
 
 <head>
