@@ -70,48 +70,49 @@ function themeFunction_scripts() {
 	// theme style.css file
 	wp_enqueue_style( 'themeTextDomain-style', get_stylesheet_uri() );
 
-	// threaded comments
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-	// scripts
-	wp_enqueue_script(
-		'jquerymin',
-		get_template_directory_uri() . '/scripts/jquery.min.js',
-		array('jquery')
+	wp_deregister_script( 'jquery' );
+
+
+	// Footer Scripts
+	wp_register_script( 'jquery',
+		get_template_directory_uri() . '/_bower_components/jquery/jquery.js',
+		array(),
+		'1.10.2',
+		true
 	);
-	wp_enqueue_script(
-		'jquery',
-		get_template_directory_uri() . '/_bower_components/jquery.js',
-		array('jquery')
-	);
+
 	wp_enqueue_script(
 		'marka',
 		get_template_directory_uri() . '/scripts/marka.js',
-		array('jquery')
-	);
-		wp_enqueue_script(
-		'main',
-		get_template_directory_uri() . '/scripts/main.js',
-		array('jquery')
-	);
-		wp_enqueue_script(
-		'typekit', '//use.typekit.net/hxo6ukw.js',
-		array('jquery')
+		array('jquery'),
+		false,
+		true
 	);
 
+	wp_enqueue_script(
+		'main',
+		get_template_directory_uri() . '/scripts/main.js',
+		array('jquery'),
+		false,
+		true
+	);
+
+
+	// Header Scripts
+	wp_enqueue_script(
+		'typekit', '//use.typekit.net/hxo6ukw.js'
+	);
+	wp_enqueue_script(
+		'modernizr',
+		get_template_directory_uri() . '/_bower_components/modernizr/modernizr.js'
+	);
+		/*
 		wp_enqueue_style(
 		'fa',
 		get_template_directory_uri() . '/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
 		array('style')
 	);
-
-	// theme scripts
-//	wp_enqueue_script(
-//		'theme-init',
-//		get_template_directory_uri() . '/assets/theme.js',
-//		array('jquery')
-//	);
+		*/
 }
 add_action('wp_enqueue_scripts', 'themeFunction_scripts');
 
@@ -129,7 +130,7 @@ include('inc/functions/customizations.php');
 /* AUDIOCLASIK BANNERS
  ========================== */
 
- 
+
 
 //Custom settings in associative array
 

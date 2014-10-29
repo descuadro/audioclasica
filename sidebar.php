@@ -6,12 +6,14 @@
  */
 
 ?>
-<div class="head-wrapper">
 	<nav role="navigation" id="nav">
 		<header>
 			<h1 class="site-logo">Audioclásica</h1>
-			<button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon">
-			</button>
+
+
+				<?php if(!is_front_page() ) { ?>
+					<button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon">
+				<?php } ?>
 		</header>
 
 		<ul id="categories">
@@ -28,12 +30,12 @@
 				'number'                   => '',
 				'taxonomy'                 => 'category',
 				'title_li'    				=> __(''),
-				'pad_counts'               => false 
+				'pad_counts'               => false
 			); ?>
-			<?php wp_list_categories( $args ); ?> 
+			<?php wp_list_categories( $args ); ?>
 		</ul>
 
-		<div class="pages">
+		<ul class="pages">
 			<?php $args = array(
 			'authors'      => '',
 			'child_of'     => 0,
@@ -49,11 +51,11 @@
 			'show_date'    => '',
 			'sort_column'  => 'menu_order, post_title',
 		        'sort_order'   => '',
-			'title_li'     => __(''), 
+			'title_li'     => __(''),
 			'walker'       => ''
 			); ?>
 			<?php wp_list_pages( $args ); ?>
-		</div>
+		</ul>
 
 		<ul class="links">
 
@@ -61,6 +63,5 @@
 				FALSE, -1, TRUE, TRUE); ?>
 		</ul>
 	</nav>
-</div>
 <!-- #secondary .widget-area -->
 
