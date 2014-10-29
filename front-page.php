@@ -15,7 +15,12 @@ get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php
 			if ( has_post_thumbnail() ) {
-         $thumbnail = get_the_post_thumbnail($post->ID,'thumbnail');
+					$post_image_id = get_post_thumbnail_id($post->ID);
+
+					if ($post_image_id) {
+						$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+						if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+					}
     	}
 		?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
