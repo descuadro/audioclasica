@@ -10,7 +10,7 @@ var navicon = new Marka('.navicon'),
 		sorticon = new Marka('.sorticon'),
 		navOpen = false,
 
-		toggleimage = $('[data-toggle="image-based"]');
+		toggleImage = $('[data-toggle="image-based"]');
 
 
 
