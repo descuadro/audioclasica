@@ -14,7 +14,7 @@
 <html id="ie" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?> class="image-based">
+<html <?php language_attributes(); ?> class="text-based">
 <!--<![endif]-->
 
 <head>
