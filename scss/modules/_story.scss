@@ -190,6 +190,9 @@ Article
 			float: none;
 			clear: both;
 
+			padding: ms(1) $paddingH/2;
+			border-top: 1px solid $acBorderColor;
+
 			header,
 			.image {
 				display: table-cell;
@@ -200,6 +203,7 @@ Article
 				max-width: 280px;
 			}
 			header {
+				padding: 0;
 				padding-left: 6.18%;
 			}
 		}

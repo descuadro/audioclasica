@@ -21,23 +21,26 @@ header[role="banner"] {
     z-index: -1;
   }
 
-  nav.toggle-nav {
-    text-align: justify;
-    width: 100%;
-
-    button {
-      display: inline-block;
-      padding: .1em 0;
-    }
-
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 100%;
-    }
-  }
+  nav.toggle-nav { width: 100%; }
 
   @media (max-width: $headerBreakpoint) {
+    nav.toggle-nav {
+      text-align: justify;
+
+      button {
+        display: inline-block;
+        vertical-align: middle;
+        padding: .25em 0 0;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+
+    }
+
     h1 {
       margin: 0;
       display: table;
