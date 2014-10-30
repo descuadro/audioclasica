@@ -4,37 +4,6 @@ Golden Layout
 
 */
 
-
-// Golden Columni
-$column: 68.54%;
-$column2: 76.4%;
-
-$bannerWidth: 6.18%;
-$golden: 61.8%;
-
-$padding1: 6.18%;
-$padding2: 11.089%;
-
-#nav,
-nav.filter {
-	a, p {
-		padding: ms(-2) 0;
-		span { padding-left: 1em; }
-	}
-
-	ul { padding: 1em 0; }
-	.legal a { padding: ms(-3) 0; }
-	.nav-block a { padding: 1em 0; }
-
-	a,p,
-	.legal a,
-	.nav-block a {
-		padding-left: $padding1;
-		padding-right: $padding1;
-	}
-}
-
-header[role="banner"],
 .catBanner header { padding: ms(-1) $paddingH; }
 
 
@@ -42,12 +11,6 @@ header[role="banner"],
 
 	header[role="banner"],
 	.catBanner { z-index: index($boysBandIndex, backstreetBoys); }
-
-	nav[role="navigation"] {
-		position: absolute;
-
-		header { @include visually-hidden(); }
-	}
 
 	.catBanner {
 		@include maxHeighter();
@@ -57,97 +20,16 @@ header[role="banner"],
 
 @media (min-width: $goldenBreakpoint) {
 
-	.head-wrapper {
-		width: 100% - $column;
-		height: 100%;
 
-		position: fixed;
-		top: 0; left: 0;
-	}
+	// Main Content
 
-	#nav {
-		position: fixed;
-		height: 100%;
-		width: 100% - $column;
+	main[role="main"] {
+		overflow: hidden;
+		transition: transform $acTransSpeed;
 
-		header {
-			@include clearfix;
-			padding: 1em;
-			background: whitesmoke;
-			border-bottom: 1px solid $acBorderColor;
-
-			h1 {
-				font-size: 2em;
-				margin-bottom: 0;
-				width: 50%;
-				white-space: nowrap;
-				float: left;
-			}
-
-			button {
-				float: right;
-				margin: .55em 0 0;
-			}
+		.navOpen & {
+			transform: translateX( $columnWidth - $bannerWidth );
 		}
-	}
-
-	nav.filter {
-		height: 100% - $golden;
-		ul { min-height: 100%; }
-	}
-
-	#nav,
-	nav.filter {
-		a,p,
-		.legal a,
-		.nav-block a,
-		header {
-			padding-left: $padding2;
-			padding-right: $padding2;
-
-			h1 { font-size: ms(1); }
-		}
-	}
-
-	main[role="main"] { margin-left: 100%-$column; }
-
-	header[role="banner"] {
-		position: fixed;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: $bannerWidth;
-		padding: 1em;
-		background: whitesmoke;
-		border-right: 1px solid $acBorderColor;
-
-		button {
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-
-			width: 100%;
-			margin: 0 !important;
-			margin-top: 2em !important;
-			span {
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-
-		h1 {
-			transform: rotate(270deg);
-			position: absolute;
-			bottom: ms(3);
-			bottom: 3.31em;
-			left: 0;
-			width: 1em;
-			margin: 0;
-			width: 100%;
-		}
-
-		display: none;
 	}
 
 	.catBanner {
@@ -186,11 +68,10 @@ header[role="banner"],
 		}
 	}
 
-	.sorticon { @include visually-hidden(); }
-
 	html.image-based {
 		body,
 		main[role="main"],
+		.page-container,
 		.feed { height: 100%; }
 	}
 
@@ -226,16 +107,11 @@ header[role="banner"],
 	}
 }
 
-@media (min-width: $hugeBreakpoint) {
 
-	.head-wrapper,
-	#nav { width: 100% - $column2; }
-
-	#nav header {
-		.navicon { margin-top: .28em; }
-	}
-
-	main[role="main"] {
-		margin-left: 100 - $column2;
-	}
+.head-wrapper { z-index: 0; }
+header[role="banner"],
+main[role="main"] {
+	position: relative;
+	z-index: 1;
+	background: whitesmoke;
 }

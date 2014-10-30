@@ -43,19 +43,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="head-wrapper">
+    <div class="page-container">
         <header role="banner">
-            <h1 class="site-logo">Audioclásica</h1>
+            <div class="logo-holder">
+                <h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Audioclásica</a></h1>
+            </div>
 
-            <button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon">
-            </button>
-
-            <button type="button" role="button" aria-label="Toggle Sorting" class="transformicon sorticon">
-            </button>
+            <nav class="toggle-nav">
+                <button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon entypo-menu"></button>
+                <button type="button" role="button" aria-label="Toggle Sorting" class="transformicon sorticon entypo-dot-3"></button>
+            </nav>
         </header>
 
-        <!-- includes -->
-        <?php get_sidebar(); ?>
-    </div>
+        <div class="head-wrapper">
+
+            <!-- includes -->
+            <?php get_sidebar(); ?>
+        </div>
 
         <main role="main" id="main">

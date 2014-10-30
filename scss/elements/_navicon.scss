@@ -6,7 +6,6 @@
 
 .transformicon {
 
-  margin: 0 1em;
   border:none;
   background:none;
 
@@ -18,15 +17,13 @@
 
   &:hover { opacity: 1; }
 
-
-  // Insiders
-
-  i {
-    top: 0;
-    left: 0;
-  }
+  font-size: 1.2em;
 }
 
-.home .navicon {
-  @extend .visually-hidden;
+
+@media (min-width: $goldenBreakpoint) {
+  .navicon {
+    font-size: ms(1);
+    &.entypo-cancel { font-size: 1.5em; }
+  }
 }

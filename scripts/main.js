@@ -6,17 +6,12 @@ Main!
 
 var body = $('body');
 
-var navicon = new Marka('.navicon'),
-		sorticon = new Marka('.sorticon'),
-		navOpen = false,
-
+var navOpen = false,
 		toggleImage = $('[data-toggle="image-based"]');
 
 
 
 // Init Icons
-
-navicon.set('bars').size(30);
 
 $('.navicon').click(function() {
 	if ( !body.hasClass('navOpen') ) {
@@ -30,8 +25,6 @@ $('.navicon').click(function() {
 	}
 });
 
-
-sorticon.set('sort').size(30);
 $('.sorticon').click(function() {
 	if ( !$('.catBanner').hasClass('is-open') ) {
 		$('.catBanner').addClass('is-open');

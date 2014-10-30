@@ -23,6 +23,17 @@ Article
 	@extend .clearfix;
 }
 
+.story-details {
+	a {
+		text-decoration: none;
+
+		&:before {
+			content: ' / ';
+			opacity: .6;
+		}
+	}
+}
+
 .story {
 	position: relative;
 	background-size: cover !important;
@@ -183,14 +194,37 @@ Article
 	}
 }
 
+@media (min-width: $goldenBreakpoint) {
 
-.story-details {
-	a {
-		text-decoration: none;
+	.image-based {
 
-		&:before {
-			content: ' / ';
-			opacity: .6;
+		.story {
+			@include square(50%);
+			float: left;
+
+			border-right: 1px solid $acBorderColor;
+
+			&.featured {
+				width: 100%;
+				height: 75%;
+				clear: left;
+				//border-color: transparent;
+			}
+		}
+
+		// Layout
+		&.no-flexbox .story {
+			padding: (25vh)/2 $paddingH;
+			&.featured { padding: (50vh)/2 $paddingH; }
+		}
+
+		&.flexbox .story {
+			display: flex;
+
+		  // To the Left
+		  align-items: flex-end;
+		  justify-content: flex-start;
 		}
 	}
 }
+

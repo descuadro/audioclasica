@@ -29,3 +29,44 @@ Category Banner
 }
 
 nav.filter { width: 100%; }
+
+.catBanner {
+
+	@include maxHeighter();
+	button { @include visually-hidden; }
+
+
+	height: 100%;
+	border-right: 1px solid $acBorderColor;
+
+	header {
+		height: $golden;
+		padding: 4em $padding2 ms(1);
+
+		.flexbox & {
+			display: flex;
+
+		  // To the Left
+		  align-items: flex-end;
+		  justify-content: flex-start;
+		}
+
+		border-bottom: 1px solid $acBorderColor;
+		background: whitesmoke;
+	}
+
+	.navicon {
+		position: absolute;
+		top: 1em;
+		margin: 0;
+		left: $padding2;
+
+		&:after {
+			content: 'Menú';
+			position: absolute;
+			top: 6px;
+			left: 30px;
+			padding-left: 1em;
+		}
+	}
+}

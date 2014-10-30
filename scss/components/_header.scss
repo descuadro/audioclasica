@@ -4,21 +4,92 @@ Header
 
 */
 
+$headerBreakpoint: $goldenBreakpoint;
+
 header[role="banner"] {
-  @extend .clearfix;
+  background: whitesmoke;
 	position: relative;
 	text-align: left;
+  height: $mobileHeaderHeight;
+  padding: ms(-1) $paddingH;
 
-  h1 {
+  .logo-holder {
+    position: absolute;
+    @include square(100%);
+    @include position(0,0,0,0);
+    text-align: center;
+    z-index: -1;
+  }
+
+  nav.toggle-nav {
+    text-align: justify;
+    width: 100%;
+
+    button {
+      display: inline-block;
+      padding: .1em 0;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $headerBreakpoint) {
+    h1 {
+      margin: 0;
+      display: table;
+      @include square(100%);
+      a {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @media (min-width: $headerBreakpoint) {
+
     float: left;
-    margin: 0;
+    height: 100%;
+    width: $bannerWidth;
+    background: whitesmoke;
+    border-right: 1px solid $acBorderColor;
+    padding: 0;
+
+    transition: transform $acTransSpeed;
+
+    .logo-holder {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+
+      height: auto;
+      @include position(auto,auto,0,0);
+      padding-bottom: ms(2);
+    }
+
+    h1 {
+      transform: rotate(270deg);
+      margin: 0;
+    }
+
+    nav.toggle-nav {
+      text-align: center;
+      padding-top: .5em;
+      button {
+        padding: .5em 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .navOpen & {
+      transform: translateX(-100%);
+    }
   }
-
-  button {
-  	float: right;
-    margin: 0 ms(-2);
-  }
-
-
-  background: whitesmoke;
 }

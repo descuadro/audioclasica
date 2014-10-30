@@ -82,14 +82,6 @@ function themeFunction_scripts() {
 	);
 
 	wp_enqueue_script(
-		'marka',
-		get_template_directory_uri() . '/scripts/marka.js',
-		array('jquery'),
-		false,
-		true
-	);
-
-	wp_enqueue_script(
 		'main',
 		get_template_directory_uri() . '/scripts/main.js',
 		array('jquery'),

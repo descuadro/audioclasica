@@ -4,20 +4,41 @@ Navigation
 
 */
 
+$navBreakpoint: $goldenBreakpoint;
+
+/* Styling */
+
 #nav,
 nav.filter {
 	background: whitesmoke;
-	ul { background: whitesmoke; }
-	z-index: index($boysBandIndex, jonasBrothers);
+
+	ul {
+		background: whitesmoke;
+		padding: 1em 0;
+		border-bottom: 1px solid $acBorderColor;
+	}
+	li { list-style: none; }
+	.nav-block { border-bottom: 1px solid $acBorderColor; }
 
 	a, p {
 		@extend .clearfix;
 		font-weight: 500;
 		display: block;
-		margin: 0;
-		text-decoration: none;
 
 		@extend .h5;
+		margin: 0;
+		padding: ms(-2) 0;
+		text-decoration: none;
+	}
+
+	.legal a { padding: ms(-3) 0; }
+	.nav-block a { padding: 1em 0; }
+
+	a,p,
+	.legal a,
+	.nav-block a {
+		padding-left: $padding1;
+		padding-right: $padding1;
 	}
 
 	a {
@@ -30,9 +51,6 @@ nav.filter {
 		}
 	}
 
-	ul { border-bottom: 1px solid $acBorderColor; }
-	li { list-style: none; }
-
 	.links a {
 		font-weight: 400;
 		text-transform: none;
@@ -41,20 +59,55 @@ nav.filter {
 		&:before { visibility: hidden; }
 	}
 
-	.nav-block { border-bottom: 1px solid $acBorderColor; }
+	@media (min-width: $navBreakpoint) {
+
+		header {
+			@include clearfix;
+			padding: 1em;
+			background: whitesmoke;
+			border-bottom: 1px solid $acBorderColor;
+
+			h1 {
+				font-size: 2em;
+				margin-bottom: 0;
+				width: 50%;
+				white-space: nowrap;
+				float: left;
+			}
+
+			button {
+				float: right;
+			}
+		}
+
+		a,p,
+		.legal a,
+		.nav-block a,
+		header {
+			padding-left: $padding2;
+			padding-right: $padding2;
+
+			h1 { font-size: ms(1); }
+		}
+	}
 }
+
+#nav { z-index: index($boysBandIndex, jonasBrothers); }
+
+
+
+
 
 /* Off Canvas Layout */
 
-$distance: 100%;
+$distance: 50%;
 
 .js {
 
 	#nav {
 		@include position($mobileHeaderHeight,0,0,0);
-
-		transition: transform $acTransSpeed;
-		transform: translateX(-$distance);
+		height: 100%;
+		z-index: 2;
 	}
 
 	.navOpen{
@@ -62,21 +115,50 @@ $distance: 100%;
 		#nav {
 			overflow-y: scroll;
 			-webkit-overflow-scrolling: touch;
-			transform: translateX(0);
 		}
 	}
+}
 
-	@media (min-width: $goldenBreakpoint) {
-		#nav { top: 0; }
+@media (max-width: $navBreakpoint) {
+	#nav { width: 100%; }
 
-		.home #nav {
-				overflow-y: scroll;
-				-webkit-overflow-scrolling: touch;
-				transform: translateX(0);
-			}
+.js {
+	#nav {
+		transition: transform $acTransSpeed;
+		transform: translateX(-100%);
+		position: absolute;
+		header { @include visually-hidden(); }
 	}
 
+	.navOpen #nav {
+		transform: translateX(0);
+	}
 }
+
+}
+
+@media (min-width: $navBreakpoint) {
+
+	.head-wrapper {
+		position: fixed;
+		height: 100%;
+		width: $columnWidth;
+	}
+
+	#nav {
+		top: 0;
+		width: 100%;
+	}
+
+	nav.filter {
+		height: 100% - $golden;
+		ul { min-height: 100%; }
+	}
+}
+
+
+
+
 
 
 

@@ -8,7 +8,6 @@
     "Naver": "~3.1.0",
     "modular-scale": "~2.0.5",
     "isotope": "~2.0.1",
-    "marka": "~0.3.1",
     "isotope-horizontal": "metafizzy/isotope-horizontal#~0.1.2",
     "isotope-masonry-horizontal": "metafizzy/isotope-masonry-horizontal#~0.1.2"
   }

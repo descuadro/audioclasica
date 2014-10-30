@@ -9,11 +9,7 @@
 	<nav role="navigation" id="nav">
 		<header>
 			<h1 class="site-logo">Audioclásica</h1>
-
-
-				<?php if(!is_front_page() ) { ?>
-					<button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon">
-				<?php } ?>
+			<button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon entypo-cancel">
 		</header>
 
 		<div class="nav-block">
