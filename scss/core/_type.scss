@@ -59,15 +59,16 @@ h6, .h6 {
    text-transform: uppercase;
    letter-spacing: 2px;
    margin: 0px 0px 1.62em 0px;
-
-   .story-author {
-   	font-weight: 500;
-   }
 }
 
 p {
    margin-bottom: 1.24em;
 }
+
+span {
+   &.light { font-weight: 500; }
+}
+
 
 a,
 a:visited {

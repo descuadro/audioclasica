@@ -21,6 +21,9 @@ Golden Layout
 
 	main[role="main"] {
 		overflow: hidden;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+
 		transition: transform $acTransSpeed;
 
 		.navOpen & {
@@ -29,12 +32,11 @@ Golden Layout
 	}
 
 
-	html.image-based {
-		body,
-		main[role="main"],
-		.page-container,
-		.feed { height: 100%; }
-	}
+	html,
+	body,
+	main[role="main"],
+	.page-container,
+	.feed { height: 100%; }
 }
 
 

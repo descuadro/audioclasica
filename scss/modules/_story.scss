@@ -4,27 +4,11 @@ Article
 
 */
 
-@mixin borderIt() {
-	content: "";
-	position: absolute;
-	top: 0;
-	background: $acBorderColor;
-	left: $paddingH;
-	right: $paddingH;
-
-	left: 0;
-	right: 0;
-	height: 1px;
-
-	z-index: index($boysBandIndex, justinBieber);
-}
-
-.home-feed {
-	@extend .clearfix;
-}
+.home-feed { @extend .clearfix; }
 
 .story-details {
-	a {
+	a,
+	time {
 		text-decoration: none;
 
 		&:before {
@@ -32,6 +16,7 @@ Article
 			opacity: .6;
 		}
 	}
+
 }
 
 .story {
@@ -44,6 +29,8 @@ Article
 		text-align: left;
 		padding: ms(1) $paddingH;
 		overflow: hidden;
+
+
 
 		header {
 			position: relative;
@@ -163,9 +150,20 @@ Article
 		}
 	}
 
+
+
+
+
+
+
+
 	.text-based & {
 		border-top: 1px solid $acBorderColor;
 		background: none !important;
+		padding: 0;
+
+		header { padding: 1em $paddingH 2em; }
+		.body { padding: 0 $paddingH 1em; }
 
 		.image {
 			margin: 0 auto;
@@ -175,9 +173,23 @@ Article
 			}
 		}
 
-		@media (min-width: 540px) {
+		@media (min-width: 520px) {
+			border: none;
+			width: 50%;
+			float: left;
+			padding: 0 $paddingH/2;
+
+			header { padding: 1em 0 2em; }
+
+			&:nth-of-type(odd) { clear: left; }
+		}
+
+		@media (min-width: $goldenBreakpoint) {
 			display: table;
 			width: 100%;
+			float: none;
+			clear: both;
+
 			header,
 			.image {
 				display: table-cell;

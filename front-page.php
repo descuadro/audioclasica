@@ -27,16 +27,24 @@ get_header(); ?>
 
 				<style> #post-<?php the_ID(); ?> { background-image: url('<?php echo $thumbnail; ?>'); } </style>
 
+				<div class="image">
 				<?php if (  has_post_thumbnail() ): ?>
-					<div class="image"><?php the_post_thumbnail(); ?></div>
+					<?php the_post_thumbnail(); ?>
+				<?php else: ?>
+					<img src="http://placehold.it/520x245">
 				<?php endif ?>
+				</div>
 
 			<header class="entry-header">
-				<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 				<h6 class="story-details">
+					<span class="light">Por</span>
 					<span class="story-author"><?php the_author() ?></span>
+
+					<time><?php the_date() ?></time>
+
 					<?php the_category('/ ') ?>
 				</h6>
+				<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 			</header><!-- .entry-header -->
 
 		</article><!-- #post-<?php the_ID(); ?> -->
