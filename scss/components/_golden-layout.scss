@@ -16,34 +16,23 @@ Golden Layout
 
 @media (min-width: $goldenBreakpoint) {
 
-
 	// Main Content
 
 	main[role="main"] {
-		overflow: hidden;
-		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
-
+		margin-left: $headerWidth;
+		margin-right: $sidebarWidth;
 		transition: transform $acTransSpeed;
 
-		.navOpen & {
-			transform: translateX( $columnWidth - $bannerWidth );
-		}
+		.navOpen & { transform: translateX( $columnWidth - $headerWidth ); }
 	}
 
 
-	html,
-	body,
-	main[role="main"],
-	.page-container,
-	.feed { height: 100%; }
 }
 
 
 .head-wrapper { z-index: 0; }
 header[role="banner"],
 main[role="main"] {
-	position: relative;
 	z-index: 1;
 	background: whitesmoke;
 }

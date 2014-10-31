@@ -10,8 +10,6 @@ get_header(); ?>
 
 <section class="home-feed feed">
 
-	<?php /* Start the Loop */ ?>
-
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php
 			if ( has_post_thumbnail() ) {
@@ -23,6 +21,8 @@ get_header(); ?>
 					}
     	}
 		?>
+		<?php if( $wp_query->current_post%2 == 0 ) echo "\n".'<div class="wrap">'."\n"; ?>
+
 		<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
 
 				<style> #post-<?php the_ID(); ?> { background-image: url('<?php echo $thumbnail; ?>'); } </style>
@@ -48,9 +48,84 @@ get_header(); ?>
 			</header><!-- .entry-header -->
 
 		</article><!-- #post-<?php the_ID(); ?> -->
+
+		<?php if( $wp_query->current_post%2 == 1 || $wp_query->current_post == $wp_query->post_count-1 ) echo '</div> <div class="banner-holder"></div>'."\n"; ?>
 	<?php endwhile; // end of the loop. ?>
+
 
 </section>
 
+<aside class="sidebar">
+	<div class="banner-holder"></div>
+	<div class="banner-holder"></div>
+	<div class="banner-holder"></div>
+</aside>
+
 <!-- #primary -->
 <?php get_footer(); ?>
+
+
+<script>
+	var feed = $('.feed'),
+			sidebar = $('aside.sidebar'),
+			breakpoint = 1023;
+
+			mobileBanner1 = feed.find('.banner-holder').eq(0),
+			mobileBanner2 = feed.find('.banner-holder').eq(1),
+			mobileBanner3 = feed.find('.banner-holder').eq(2),
+
+			sidebarBanner1 = sidebar.find('.banner-holder').eq(0),
+			sidebarBanner2 = sidebar.find('.banner-holder').eq(1),
+			sidebarBanner3 = sidebar.find('.banner-holder').eq(2);
+
+			enquire.register("screen and (max-width: 1023px)", {
+		    match : function() {
+		      mobileBanner1.load('<?php bloginfo('template_url'); ?>/extra.php #extra-1', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					mobileBanner2.load('<?php bloginfo('template_url'); ?>/extra.php #extra-2', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					mobileBanner3.load('<?php bloginfo('template_url'); ?>/extra.php #extra-3', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+		    },
+		    unmatch : function() {
+		      mobileBanner1.add(mobileBanner2).add(mobileBanner3).find('.extra').remove();
+		    }
+			});
+
+			enquire.register("screen and (min-width: 1023px)", {
+		    match : function() {
+		      sidebarBanner1.load('<?php bloginfo('template_url'); ?>/extra.php #extra-1', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					sidebarBanner2.load('<?php bloginfo('template_url'); ?>/extra.php #extra-2', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					sidebarBanner3.load('<?php bloginfo('template_url'); ?>/extra.php #extra-3', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+		    },
+		    unmatch : function() {
+		      sidebarBanner1.add(sidebarBanner2).add(sidebarBanner3).find('.extra').remove();
+		    }
+			});
+</script>
+

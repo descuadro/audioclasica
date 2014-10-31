@@ -5,7 +5,7 @@ Main!
 */
 
 @import 'helpers/base-styles';
-@import '../_bower_components/modular-scale/stylesheets/modular-scale';
+@import '../bower_components/modular-scale/stylesheets/modular-scale';
 
 
 @import 'core/vars';
@@ -26,3 +26,4 @@ Main!
 @import 'vendor/naver';
 
 @import 'modules/story';
+@import 'modules/banners';

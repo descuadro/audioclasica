@@ -52,8 +52,18 @@ add_action( 'after_setup_theme', 'themeFunction_setup' );
  ========================== */
 function themeFunction_widgets_init() {
 	register_sidebar(array(
-		'name' => 'Categorias',
+		'name' => 'Main Navigation',
 		'id'   => 'sidebar-1',
+		'description'   => 'This is a widgetized area.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
+
+	register_sidebar(array(
+		'name' => 'Banners',
+		'id'   => 'sidebar-2',
 		'description'   => 'This is a widgetized area.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
@@ -75,9 +85,33 @@ function themeFunction_scripts() {
 
 	// Footer Scripts
 	wp_register_script( 'jquery',
-		get_template_directory_uri() . '/_bower_components/jquery/jquery.js',
+		get_template_directory_uri() . '/bower_components/jquery/jquery.js',
 		array(),
 		'1.10.2',
+		true
+	);
+
+	wp_enqueue_script(
+		'enquire',
+		get_template_directory_uri() . '/bower_components/enquire/dist/enquire.js',
+		array('jquery'),
+		'2.1.0',
+		true
+	);
+
+	wp_enqueue_script(
+		'picturefill',
+		get_template_directory_uri() . '/bower_components/picturefill/dist/picturefill.js',
+		array('jquery'),
+		'2.1.0',
+		true
+	);
+
+	wp_enqueue_script(
+		'imagesloaded',
+		get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.js',
+		array('jquery'),
+		'2.1.0',
 		true
 	);
 
@@ -96,7 +130,7 @@ function themeFunction_scripts() {
 	);
 	wp_enqueue_script(
 		'modernizr',
-		get_template_directory_uri() . '/_bower_components/modernizr/modernizr.js'
+		get_template_directory_uri() . '/bower_components/modernizr/modernizr.js'
 	);
 		/*
 		wp_enqueue_style(

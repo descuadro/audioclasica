@@ -1,0 +1,68 @@
+/*
+
+Banners
+
+*/
+
+$br1: 600px;
+$br2: 1023px;
+
+.banner-1 {
+	background: black;
+
+	color: white;
+	text-align: center;
+
+	h2 { margin: 0; }
+
+	display: none;
+}
+
+.banner-holder {
+	display: inline;
+	img {
+		width: 100%;
+		margin: 0;
+	}
+
+	.feed & { margin: ms(2) 0; }
+	.sidebar & { border-bottom: 1px solid $acBorderColor; }
+
+	a {
+		display: block;
+	}
+}
+
+@media (max-width: $goldenBreakpoint) {
+	.banner-holder a {
+		max-width: 100% - ($paddingH * 2);
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: $goldenBreakpoint) {
+	aside.sidebar { @include visually-hidden(); }
+	.banner-holder a {
+		margin: 2em auto ms(2);
+	}
+}
+
+@media (min-width: $goldenBreakpoint) {
+
+	aside.sidebar {
+		position: absolute;
+		@include position(0,0,0,auto);
+		width: $sidebarWidth;
+		min-height: 100%;
+
+		transition: transform $acTransSpeed;
+		.navOpen & { transform: translateX( $columnWidth - $headerWidth ) }
+
+
+	}
+
+	article.banner {
+		border-top: 1px solid white;
+		img { width: 100%; }
+	}
+}

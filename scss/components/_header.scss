@@ -54,9 +54,11 @@ header[role="banner"] {
 
   @media (min-width: $headerBreakpoint) {
 
-    float: left;
+    position: fixed;
+    @include position($topBanner,auto,0,0);
+
     height: 100%;
-    width: $bannerWidth;
+    width: $headerWidth;
     background: whitesmoke;
     border-right: 1px solid $acBorderColor;
     padding: 0;
