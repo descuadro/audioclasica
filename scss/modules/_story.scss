@@ -4,6 +4,9 @@ Article
 
 */
 
+$contentBr1: 520px;
+$contentBr2: $goldenBreakpoint;
+
 .home-feed { @extend .clearfix; }
 
 .story-details {
@@ -65,8 +68,9 @@ Article
 			}
 		}
 
-		@media (min-width: $goldenBreakpoint) {
+		@media (min-width: $contentBr2) {
 			h1 { font-size: 2em }
+			.body { @include visually-hidden() }
 		}
 
 		@media (min-width: 1240px) {
@@ -92,7 +96,11 @@ Article
 		}
 	}
 
-	@media (min-width: 520px) {
+	@media (max-width: $contentBr1) {
+		.image { margin-top: 1em; }
+	}
+
+	@media (min-width: $contentBr1) {
 		border: none;
 		width: 50%;
 		float: left;
@@ -108,7 +116,7 @@ Article
 		}
 	}
 
-	@media (min-width: $goldenBreakpoint) {
+	@media (min-width: $contentBr2) {
 		display: table;
 		width: 100%;
 		float: none;
@@ -235,9 +243,26 @@ Article
 
 /* First Article Layout */
 
-.featured-wrap { @extend .clearfix; }
+.feed .featured-wrap {
+	@extend .clearfix;
+	.banner-holder {
+		margin: 0;
+		a { margin: 0 auto; }
+	}
 
-@media (min-width: 520px) and (max-width: $goldenBreakpoint) {
+	@media (max-width: $contentBr1) {
+		> .story {
+			border: none;
+			.image { margin: 0; }
+			header, .body { padding: 0 6.18%; }
+		}
+	}
+	@media (min-width: $contentBr1) {
+		.banner-holder { margin: ms(2) $paddingH/2 0; }
+	}
+}
+
+@media (min-width: $contentBr1) and (max-width: $contentBr2) {
 	.featured-wrap {
 		padding: ms(1) $paddingH/2;
 
@@ -263,13 +288,15 @@ Article
 
 			> * + * { margin-top: ms(2); }
 		}
+
+		.banner-holder a { max-width: none; }
 	}
 }
 
 
 
 /*
-@media (min-width: $goldenBreakpoint) {
+@media (min-width: $contentBr2) {
 
 	.image-based {
 

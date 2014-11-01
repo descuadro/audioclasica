@@ -73,7 +73,7 @@ get_header(); ?>
 		<?php if( $wp_query->current_post%2 == 0 && !$wp_query->current_post == 0 || $wp_query->current_post == $wp_query->post_count-1 ) echo '</div><div class="banner-holder"></div>'."\n"; ?>
 
 		<?php #If third post, close featured loop ?>
-		<?php if( $wp_query->current_post == 2  ) echo '<div class="banner-holder"></div></div>'."\n"; ?>
+		<?php if( $wp_query->current_post == 2  ) echo '</div>'."\n"; ?>
 	<?php endwhile; // end of the loop. ?>
 
 </section>
@@ -93,9 +93,9 @@ get_header(); ?>
 			sidebar = $('aside.sidebar'),
 			breakpoint = 1023;
 
-			mobileBanner1 = feed.find('.banner-holder').eq(1),
-			mobileBanner2 = feed.find('.banner-holder').eq(2),
-			mobileBanner3 = feed.find('.banner-holder').eq(3),
+			mobileBanner1 = feed.find('.banner-holder').eq(0),
+			mobileBanner2 = feed.find('.banner-holder').eq(1),
+			mobileBanner3 = feed.find('.banner-holder').eq(2),
 
 			sidebarBanner1 = sidebar.find('.banner-holder').eq(0),
 			sidebarBanner2 = sidebar.find('.banner-holder').eq(1),
