@@ -92,6 +92,14 @@ function themeFunction_scripts() {
 	);
 
 	wp_enqueue_script(
+		'infinite-scroll',
+		get_template_directory_uri() . '/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js',
+		array('jquery'),
+		'2.1.0',
+		true
+	);
+
+	wp_enqueue_script(
 		'enquire',
 		get_template_directory_uri() . '/bower_components/enquire/dist/enquire.js',
 		array('jquery'),
@@ -171,24 +179,62 @@ echo wp_get_attachment_image( 42, 'custom-size' );
 
 
 	function sgr_display_image_size_names_muploader( $sizes ) {
-	     
+
 	    $new_sizes = array();
-	     
+
 	    $added_sizes = get_intermediate_image_sizes();
-	     
+
 	    // $added_sizes is an indexed array, therefore need to convert it
 	    // to associative array, using $value for $key and $value
 	    foreach( $added_sizes as $key => $value) {
 	        $new_sizes[$value] = $value;
 	    }
-	     
+
 	    // This preserves the labels in $sizes, and merges the two arrays
 	    $new_sizes = array_merge( $new_sizes, $sizes );
-	     
+
 	    return $new_sizes;
 	}
 	add_filter('image_size_names_choose', 'sgr_display_image_size_names_muploader', 11, 1);
 
 //Custom settings in associative array
 
+# Pagination links
+add_filter('next_posts_link_attributes', 'sdac_next_posts_link_attributes');
+function sdac_next_posts_link_attributes(){
+        return 'class="older"';
+}
+
+add_filter('previous_posts_link_attributes', 'sdac_previous_posts_link_attributes');
+function sdac_previous_posts_link_attributes(){
+        return 'class="newer"';
+}
+
+/**
+ * Infinite Scroll
+ */
+
+function custom_infinite_scroll_js() {
+	if( ! is_singular() ) { ?>
+	<script>
+		var infinite_scroll = {
+			loading: {
+				img: "<?php echo get_template_directory_uri(); ?>/assets/images/loading.gif",
+				msgText: "<?php _e( 'Cargando más historias...', 'custom' ); ?>",
+				finishedMsg: "<?php _e( 'Enhorabuena! Llegó usted al fondo del océano!', 'custom' ); ?>"
+			},
+			"nextSelector":".pagination .older",
+			"navSelector":".pagination",
+			"itemSelector":"article",
+			"contentSelector":".feed",
+			"animate":"true"
+		};
+		jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
+	</script>
+	<?php
+	}
+}
+add_action( 'wp_footer', 'custom_infinite_scroll_js',100 );
+
 ?>
+

@@ -21,7 +21,7 @@ Pagination
 			font-family: 'entypo', sans-serif;
 		}
 
-		&:first-of-type {
+		&.newer {
 			margin-right: ms(-1);
 			&:before {
 				content: '\25c2';
@@ -29,13 +29,15 @@ Pagination
 			}
 		}
 
-		&:last-of-type {
+		&.older {
 			margin-left: ms(-1);
 			&:after {
 				content: '\25b8';
 				margin-left: ms(-1);
 			}
 		}
+
+		&:only-child { margin: 0 !important; }
 	}
 
 	@media (max-width: $goldenBreakpoint) { text-align: center; }

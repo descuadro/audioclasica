@@ -8,7 +8,7 @@
 $post_classes = array( 'story', );
 get_header(); ?>
 
-<section class="home-feed feed">
+<section class="feed" <?php if ( is_home() ): ?>id="home-feed"<?php endif ?>>
 	<?php if (is_category()): ?>
 
 		<header>
