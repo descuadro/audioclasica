@@ -25,6 +25,7 @@ Article
 }
 
 .story {
+	padding: ms(1) $paddingH;
 	position: relative;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
@@ -34,7 +35,6 @@ Article
 
 	.feed & {
 		text-align: left;
-		padding: ms(1) $paddingH;
 		overflow: hidden;
 
 
@@ -79,61 +79,56 @@ Article
 
 
 
+	border-top: 1px solid $acBorderColor;
+	background: none !important;
+	padding: 0;
 
+	.image {
+		margin: 0 auto;
+		img {
 
+			width: 100%;
+			height: auto;
+		}
+	}
 
-
-	.text-based & {
-		border-top: 1px solid $acBorderColor;
-		background: none !important;
+	@media (min-width: 520px) {
+		border: none;
+		width: 50%;
+		float: left;
+		margin-top: 0;
 		padding: 0;
 
+		&:nth-of-type(odd) {
+			clear: left;
+			padding-right: $paddingH/2;
+		}
+		&:nth-of-type(even) {
+			padding-left: $paddingH/2;
+		}
+	}
+
+	@media (min-width: $goldenBreakpoint) {
+		display: table;
+		width: 100%;
+		float: none;
+		clear: both;
+
+		padding: 2em $paddingH/2;
+		border-top: 1px solid $acBorderColor;
+
+		header,
 		.image {
-			margin: 0 auto;
-			img {
-
-				width: 100%;
-				height: auto;
-			}
+			display: table-cell;
+			vertical-align: middle;
 		}
-
-		@media (min-width: 520px) {
-			border: none;
-			width: 50%;
-			float: left;
-			margin-top: 0;
-
-			&:nth-of-type(odd) {
-				clear: left;
-				padding-right: $paddingH/2;
-			}
-			&:nth-of-type(even) {
-				padding-left: $paddingH/2;
-			}
+		.image {
+			width: 23.6%;
+			max-width: 280px;
 		}
-
-		@media (min-width: $goldenBreakpoint) {
-			display: table;
-			width: 100%;
-			float: none;
-			clear: both;
-
-			padding: 2em $paddingH/2;
-			border-top: 1px solid $acBorderColor;
-
-			header,
-			.image {
-				display: table-cell;
-				vertical-align: middle;
-			}
-			.image {
-				width: 23.6%;
-				max-width: 280px;
-			}
-			header {
-				padding: 0;
-				padding-left: 6.18%;
-			}
+		header {
+			padding: 0;
+			padding-left: 6.18%;
 		}
 	}
 }
@@ -238,6 +233,42 @@ Article
 	}
 }
 
+/* First Article Layout */
+
+.featured-wrap { @extend .clearfix; }
+
+@media (min-width: 520px) and (max-width: $goldenBreakpoint) {
+	.featured-wrap {
+		padding: ms(1) $paddingH/2;
+
+		> * { float: left; }
+
+		> .story {
+			width: 60%;
+			padding: 0 $paddingH/2;
+
+			h1 { font-size: ms(2); }
+		}
+		.wrap {
+			width: 40%;
+			clear: none;
+			padding: 0 $paddingH/2;
+			margin: 0;
+
+			.story {
+				width: 100%;
+				clear: both;
+				padding: 0 !important;
+			}
+
+			> * + * { margin-top: ms(2); }
+		}
+	}
+}
+
+
+
+/*
 @media (min-width: $goldenBreakpoint) {
 
 	.image-based {
@@ -271,4 +302,4 @@ Article
 		}
 	}
 }
-
+*/

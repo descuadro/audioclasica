@@ -18,6 +18,8 @@ get_header(); ?>
 
 	<?php endif ?>
 
+	<!-- Loop -->
+
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php
 			if ( has_post_thumbnail() ) {
@@ -29,10 +31,16 @@ get_header(); ?>
 					}
     	}
 		?>
-		<?php if( $wp_query->current_post%2 == 0 ) echo "\n".'<div class="wrap">'."\n"; ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
+		<?php #If first post, open featured loop ?>
+		<?php if ( $wp_query->current_post == 0 ) { echo '<div class="featured-wrap">'."\n";  } ?>
 
+		<?php #If even, open wrap ?>
+		<?php if( $wp_query->current_post%2 == 1 ) echo  "\n".'<div class="wrap">'."\n" ; ?>
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
+
+				<?php #in principle, this isn't going in ?>
 				<style> #post-<?php the_ID(); ?> { background-image: url('<?php echo $thumbnail; ?>'); } </style>
 
 				<div class="image">
@@ -43,23 +51,30 @@ get_header(); ?>
 				<?php endif ?>
 				</div>
 
-			<header class="entry-header">
-				<h6 class="story-details">
-					<span class="light">Por</span>
-					<span class="story-author"><?php the_author() ?></span>
+				<header class="entry-header">
+					<h6 class="story-details">
+						<span class="light">Por</span>
+						<span class="story-author"><?php the_author() ?></span>
 
-					<time><?php the_date() ?></time>
+						<time><?php the_date() ?></time>
 
-					<?php the_category('/ ') ?>
-				</h6>
-				<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-			</header><!-- .entry-header -->
+						<?php the_category('/ ') ?>
+					</h6>
+					<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+				</header>
 
-		</article><!-- #post-<?php the_ID(); ?> -->
+				<?php if ( $wp_query->current_post == 0 ): ?>
+					<div class="body"><?php the_excerpt(); ?></div>
+				<?php endif ?>
 
-		<?php if( $wp_query->current_post%2 == 1 || $wp_query->current_post == $wp_query->post_count-1 ) echo '</div> <div class="banner-holder"></div>'."\n"; ?>
+			</article>
+
+		<?php #If odd and not first article, close wrap ?>
+		<?php if( $wp_query->current_post%2 == 0 && !$wp_query->current_post == 0 || $wp_query->current_post == $wp_query->post_count-1 ) echo '</div><div class="banner-holder"></div>'."\n"; ?>
+
+		<?php #If third post, close featured loop ?>
+		<?php if( $wp_query->current_post == 2  ) echo '<div class="banner-holder"></div></div>'."\n"; ?>
 	<?php endwhile; // end of the loop. ?>
-
 
 </section>
 
@@ -78,9 +93,9 @@ get_header(); ?>
 			sidebar = $('aside.sidebar'),
 			breakpoint = 1023;
 
-			mobileBanner1 = feed.find('.banner-holder').eq(0),
-			mobileBanner2 = feed.find('.banner-holder').eq(1),
-			mobileBanner3 = feed.find('.banner-holder').eq(2),
+			mobileBanner1 = feed.find('.banner-holder').eq(1),
+			mobileBanner2 = feed.find('.banner-holder').eq(2),
+			mobileBanner3 = feed.find('.banner-holder').eq(3),
 
 			sidebarBanner1 = sidebar.find('.banner-holder').eq(0),
 			sidebarBanner2 = sidebar.find('.banner-holder').eq(1),
