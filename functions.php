@@ -33,6 +33,18 @@ function themeFunction_setup() {
 	// Add featured image support
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size('Banner 1 big',1204,600,true);
+	add_image_size('Banner 2 big',1204,768,true);
+	add_image_size('Banner 3 big',1204,768,true);
+
+	add_image_size('Banner 1 small',350,332,true);
+	add_image_size('Banner 2 small',350,450,true);
+	add_image_size('Banner 3 small',350,526,true);
+
+	add_image_size('Banner 1 mid',600,570,true);
+	add_image_size('Banner 2 mid',600,770,true);
+	add_image_size('Banner 3 mid',600,900,true);
+
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
 		'comment-list',
@@ -163,10 +175,6 @@ include('inc/functions/customizations.php');
 
 /* AUDIOCLASIK BANNERS
  ========================== */
-
-add_image_size('Banner 1', 1204, 600, true);
-add_image_size('Banner 2', 1204, 768, true);
-add_image_size('Banner 3', 1204, 768, true);
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 

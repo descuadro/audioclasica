@@ -62,6 +62,7 @@
 			<?php get_links('-1', '<li><span>', '</span></li>', '', FALSE, 'id', FALSE,
 				FALSE, -1, TRUE, TRUE); ?>
 		</ul>
+		
 	</nav>
 <!-- #secondary .widget-area -->
 
