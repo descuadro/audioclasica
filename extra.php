@@ -15,7 +15,7 @@
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-2') ) : ?>
 <?php endif; ?>
 
-<!--- la llamada de arriba tiene que reemplazar el output de abajo -->
+<!--- la llamada de arriba tiene que reemplazar el output de abajo... -->
 
 <!-- <div id="extra-1">
 	<a href="#" class="extra">
