@@ -6,7 +6,7 @@ Site Logo
 
 .site-logo {
 	font-weight: 500;
-	font-size: 0.8em;
-	text-transform: uppercase;
+	white-space: nowrap;
+	@extend .h5;
 	letter-spacing: 3px;
 }

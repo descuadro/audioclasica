@@ -7,8 +7,8 @@ Detail List
 .story-details {
 	color: $acMidGray;
 
-	a,
-	time {
+	> a,
+	> time {
 		text-decoration: none;
 
 		&:before {
@@ -18,4 +18,15 @@ Detail List
 	}
 
 	.feed & { margin-left: 3px; }
+
+	span { display: inline; }
+
+	.cat-title {
+		display: inline;
+		* { display: inline; }
+		&:before {
+			content: ' / ';
+			color: $acMidGray;
+		}
+	}
 }

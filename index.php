@@ -57,7 +57,8 @@ get_header(); ?>
 
 						<time><?php the_date() ?></time>
 
-						<?php the_category('/ ') ?>
+						<div class="cat-title <?php single_cat_title( '', true ); ?>"><?php the_category('') ?></div>
+
 					</h6>
 					<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 				</header>

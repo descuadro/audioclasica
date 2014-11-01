@@ -47,7 +47,12 @@
     <div class="page-container">
         <header role="banner">
             <div class="logo-holder">
-                <h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Audioclásica</a></h1>
+                <h1 class="site-logo">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        Audioclásica
+                        <?php if (is_category()): ?> - <span class="cat-title"><?php single_cat_title( '', true ); ?></span><?php endif ?>
+                    </a>
+                </h1>
             </div>
 
             <nav class="toggle-nav">

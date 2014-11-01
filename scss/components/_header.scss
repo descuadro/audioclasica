@@ -7,7 +7,7 @@ Header
 $headerBreakpoint: $goldenBreakpoint;
 
 header[role="banner"] {
-  $acBorderColor: $acDarkGray;
+  $acBorderColor: white;
 
   background: $acBlack;
   color: white;
@@ -19,7 +19,7 @@ header[role="banner"] {
 
   border-bottom: 1px solid $acBorderColor;
 
-  * { color: inherit; }
+  * { color: inherit !important; }
 
   .logo-holder {
     position: absolute;
@@ -30,6 +30,7 @@ header[role="banner"] {
   }
 
   nav.toggle-nav { width: 100%; }
+  .category-nav { letter-spacing: none; }
 
   button.is-active { color: white; opacity: 1; }
 
@@ -61,6 +62,8 @@ header[role="banner"] {
         vertical-align: middle;
       }
     }
+
+    .category-nav { @include visually-hidden(); }
   }
 
   @media (min-width: $headerBreakpoint) {
@@ -71,7 +74,7 @@ header[role="banner"] {
 
     height: 100%;
     width: $headerWidth;
-    border-right: 1px solid $acBorderColor;
+    //border-right: 1px solid $acBorderColor;
     padding: 0;
 
     transition: transform $acTransSpeed;
@@ -104,8 +107,6 @@ header[role="banner"] {
       }
     }
 
-    .navOpen & {
-      transform: translateX(-100%);
-    }
+    .navOpen & { transform: translateX(-100%); }
   }
 }
