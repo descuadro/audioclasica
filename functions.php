@@ -156,7 +156,38 @@ include('inc/functions/customizations.php');
 /* AUDIOCLASIK BANNERS
  ========================== */
 
+add_image_size('Banner 1', 1204, 600, true);
+add_image_size('Banner 2', 1204, 768, true);
+add_image_size('Banner 3', 1204, 768, true);
 
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+
+function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'your-custom-size' => __('Your Custom Size Name'),
+    ) );
+}
+echo wp_get_attachment_image( 42, 'custom-size' );
+
+
+	function sgr_display_image_size_names_muploader( $sizes ) {
+	     
+	    $new_sizes = array();
+	     
+	    $added_sizes = get_intermediate_image_sizes();
+	     
+	    // $added_sizes is an indexed array, therefore need to convert it
+	    // to associative array, using $value for $key and $value
+	    foreach( $added_sizes as $key => $value) {
+	        $new_sizes[$value] = $value;
+	    }
+	     
+	    // This preserves the labels in $sizes, and merges the two arrays
+	    $new_sizes = array_merge( $new_sizes, $sizes );
+	     
+	    return $new_sizes;
+	}
+	add_filter('image_size_names_choose', 'sgr_display_image_size_names_muploader', 11, 1);
 
 //Custom settings in associative array
 
