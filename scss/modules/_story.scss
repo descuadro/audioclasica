@@ -66,6 +66,10 @@ Article
 		}
 
 		@media (min-width: $goldenBreakpoint) {
+			h1 { font-size: 2em }
+		}
+
+		@media (min-width: 1240px) {
 			h1 { font-size: ms(2) }
 		}
 
@@ -114,7 +118,7 @@ Article
 			float: none;
 			clear: both;
 
-			padding: ms(1) $paddingH/2;
+			padding: 2em $paddingH/2;
 			border-top: 1px solid $acBorderColor;
 
 			header,
@@ -139,7 +143,7 @@ Article
 	clear: both;
 	padding: 0 $paddingH 0;
 
-	//padding: 0 $paddingH/2 0;
+	@media (min-width: $goldenBreakpoint) { margin: 0; }
 }
 
 

@@ -43,9 +43,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <article class="banner-1">
-        <h2>Banner 1</h2>
-    </article>
 
     <div class="page-container">
         <header role="banner">

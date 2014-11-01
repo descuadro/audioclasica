@@ -1,37 +1,131 @@
 <?php
 /**
  * Main Template File
- * 
- * This file is used to display a page when nothing more specific matches a query.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package themeHandle
  */
 
+$post_classes = array( 'story', );
 get_header(); ?>
 
 <section class="home-feed feed">
-<h1>Buuuu</h1>
-		
-	<?php if ( have_posts() ) : ?>
 
-			
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post();?>
+	<?php while ( have_posts() ) : the_post(); ?>
+		<?php
+			if ( has_post_thumbnail() ) {
+					$post_image_id = get_post_thumbnail_id($post->ID);
 
-			<?php get_template_part( 'content', get_post_format() ); ?>
+					if ($post_image_id) {
+						$thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+						if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+					}
+    	}
+		?>
+		<?php if( $wp_query->current_post%2 == 0 ) echo "\n".'<div class="wrap">'."\n"; ?>
 
-		<?php endwhile; ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
 
-		<?php get_template_part( 'inc/pagination' ); ?>
+				<style> #post-<?php the_ID(); ?> { background-image: url('<?php echo $thumbnail; ?>'); } </style>
 
-	<?php else : ?>
+				<div class="image">
+				<?php if (  has_post_thumbnail() ): ?>
+					<?php the_post_thumbnail(); ?>
+				<?php else: ?>
+					<img src="http://placehold.it/520x245">
+				<?php endif ?>
+				</div>
 
-		<?php get_template_part( 'content', 'none' ); ?>
+			<header class="entry-header">
+				<h6 class="story-details">
+					<span class="light">Por</span>
+					<span class="story-author"><?php the_author() ?></span>
 
-	<?php endif; ?>
+					<time><?php the_date() ?></time>
 
-</section><!-- #primary -->
+					<?php the_category('/ ') ?>
+				</h6>
+				<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+			</header><!-- .entry-header -->
 
-<?php get_sidebar(); ?>
+		</article><!-- #post-<?php the_ID(); ?> -->
+
+		<?php if( $wp_query->current_post%2 == 1 || $wp_query->current_post == $wp_query->post_count-1 ) echo '</div> <div class="banner-holder"></div>'."\n"; ?>
+	<?php endwhile; // end of the loop. ?>
+
+
+</section>
+
+<aside class="sidebar">
+	<div class="banner-holder"></div>
+	<div class="banner-holder"></div>
+	<div class="banner-holder"></div>
+</aside>
+
+<!-- #primary -->
 <?php get_footer(); ?>
+
+
+<script>
+	var feed = $('.feed'),
+			sidebar = $('aside.sidebar'),
+			breakpoint = 1023;
+
+			mobileBanner1 = feed.find('.banner-holder').eq(0),
+			mobileBanner2 = feed.find('.banner-holder').eq(1),
+			mobileBanner3 = feed.find('.banner-holder').eq(2),
+
+			sidebarBanner1 = sidebar.find('.banner-holder').eq(0),
+			sidebarBanner2 = sidebar.find('.banner-holder').eq(1),
+			sidebarBanner3 = sidebar.find('.banner-holder').eq(2);
+
+			enquire.register("screen and (max-width: 1023px)", {
+		    match : function() {
+		      mobileBanner1.load('<?php bloginfo('template_url'); ?>/extra.php #extra-1', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					mobileBanner2.load('<?php bloginfo('template_url'); ?>/extra.php #extra-2', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					mobileBanner3.load('<?php bloginfo('template_url'); ?>/extra.php #extra-3', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+		    },
+		    unmatch : function() {
+		      mobileBanner1.add(mobileBanner2).add(mobileBanner3).find('.extra').remove();
+		    }
+			});
+
+			enquire.register("screen and (min-width: 1023px)", {
+		    match : function() {
+		      sidebarBanner1.load('<?php bloginfo('template_url'); ?>/extra.php #extra-1', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					sidebarBanner2.load('<?php bloginfo('template_url'); ?>/extra.php #extra-2', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+
+					sidebarBanner3.load('<?php bloginfo('template_url'); ?>/extra.php #extra-3', function() {
+						$(this).imagesLoaded( function() {
+							picturefill();
+						});
+					});
+		    },
+		    unmatch : function() {
+		      sidebarBanner1.add(sidebarBanner2).add(sidebarBanner3).find('.extra').remove();
+		    }
+			});
+</script>
+
