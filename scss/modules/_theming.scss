@@ -4,11 +4,11 @@ Theming
 
 */
 
-.category-4 {
-	header[role="banner"] {
-		background: $acPalette4;
-	}
+/* For Loop */
+@for $i from 1 through length($acColorList) {
 
-	.feed .story { border-color: fade-out( $acPalette4, .8 ); }
-	//.story-details { color: darken( $acPalette4, 20% ) }
+	.category-#{$i} {
+		header[role="banner"] { background: nth($acColorList, $i); }
+		.feed .story { border-color: fade-out( nth($acColorList, $i), .8 ); }
+	}
 }
