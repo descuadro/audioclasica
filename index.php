@@ -9,6 +9,14 @@ $post_classes = array( 'story', );
 get_header(); ?>
 
 <section class="home-feed feed">
+	<?php if (is_category()): ?>
+
+		<header>
+			<h2>Categoría</h2>
+			<h1><?php single_cat_title( '', true ); ?></h1>
+		</header>
+
+	<?php endif ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php

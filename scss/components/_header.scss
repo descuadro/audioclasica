@@ -13,6 +13,8 @@ header[role="banner"] {
   height: $mobileHeaderHeight;
   padding: ms(-1) $paddingH;
 
+  border-bottom: 1px solid $acBorderColor;
+
   .logo-holder {
     position: absolute;
     @include square(100%);

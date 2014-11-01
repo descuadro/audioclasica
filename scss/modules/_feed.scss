@@ -1,0 +1,31 @@
+/*
+
+Feed
+
+*/
+
+.feed {
+	> header {
+		padding: 0 $paddingH 1em;
+		h1 {
+			@extend .h2;
+			margin-bottom: 0;
+		}
+		h2 {
+			@extend .h5;
+			margin-bottom: -(ms(-1));
+		}
+
+		@media (min-width: $goldenBreakpoint) { padding-top: 2em; }
+	}
+
+	.wrap {
+		@extend .clearfix;
+		clear: both;
+		padding: 0 $paddingH;
+		@media (min-width: $goldenBreakpoint) {
+			padding: 0 $paddingH / 2;
+			margin: 0;
+		}
+	}
+}

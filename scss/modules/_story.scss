@@ -138,14 +138,6 @@ Article
 	}
 }
 
-.feed .wrap {
-	@extend .clearfix;
-	clear: both;
-	padding: 0 $paddingH 0;
-
-	@media (min-width: $goldenBreakpoint) { margin: 0; }
-}
-
 
 
 
