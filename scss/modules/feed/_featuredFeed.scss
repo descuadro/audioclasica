@@ -1,0 +1,58 @@
+/*
+
+Featured Feed Layout
+
+*/
+
+.feed .featured-wrap {
+	@extend .clearfix;
+	.banner-holder {
+		margin: 0;
+		a { margin: 0 auto; }
+	}
+
+	@media (max-width: $contentBr1) {
+		> .story {
+			border: none;
+			.image { margin: 0; }
+			header, .body { padding: 0 6.18%; }
+		}
+	}
+
+	@media (min-width: $contentBr1) and (max-width: $contentBr2) {
+		padding: ms(1) $paddingH/2;
+
+		> * { float: left; }
+
+		> .story {
+			width: 60%;
+			padding: 0 $paddingH/2;
+
+			h1 { font-size: ms(2); }
+		}
+		.wrap {
+			width: 40%;
+			clear: none;
+			padding: 0 $paddingH/2;
+			margin: 0;
+
+			.story {
+				width: 100%;
+				clear: both;
+				padding: 0 !important;
+			}
+
+			> * + * { margin-top: ms(2); }
+		}
+
+		.banner-holder a { max-width: none; }
+	}
+
+	@media (min-width: $contentBr1) {
+		.banner-holder { margin: ms(2) $paddingH/2 0; }
+	}
+
+	@media (min-width: $contentBr2) {
+		> .story { padding: 2em $paddingH }
+	}
+}

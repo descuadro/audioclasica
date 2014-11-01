@@ -5,6 +5,13 @@ Feed
 */
 
 .feed {
+	@extend .clearfix;
+
+	// Lobotomized Owl Selector
+	* + * { margin-top: ms(1); }
+	> *:last-child { margin-bottom: 0; }
+
+
 	> header {
 		padding: 0 $paddingH 1em;
 		h1 {

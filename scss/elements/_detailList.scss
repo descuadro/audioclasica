@@ -1,0 +1,21 @@
+/*
+
+Detail List
+
+*/
+
+
+
+.story-details {
+	a,
+	time {
+		text-decoration: none;
+
+		&:before {
+			content: ' / ';
+			opacity: .6;
+		}
+	}
+
+	.feed & { margin-left: 3px; }
+}

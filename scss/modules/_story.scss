@@ -293,6 +293,10 @@ $contentBr2: $goldenBreakpoint;
 	}
 }
 
+@media (min-width: $contentBr2) {
+	.featured-wrap > .story { padding: 2em $paddingH }
+}
+
 
 
 /*
