@@ -76,6 +76,9 @@ get_header(); ?>
 		<?php if( $wp_query->current_post == 2  ) echo '</div>'."\n"; ?>
 	<?php endwhile; // end of the loop. ?>
 
+	<nav class="pagination">
+		<?php posts_nav_link(' ... ', 'Anterior', 'Siguiente'); ?>
+	</nav>
 </section>
 
 <aside class="sidebar">

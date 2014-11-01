@@ -1,0 +1,42 @@
+/*
+
+Pagination
+
+*/
+
+.pagination {
+	padding: 1em $paddingH;
+	margin: 0;
+
+	a {
+		@extend .h5;
+		text-decoration: none;
+
+		&:after,
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -.15em;
+			font-size: ms(1);
+			font-family: 'entypo', sans-serif;
+		}
+
+		&:first-of-type {
+			margin-right: ms(-1);
+			&:before {
+				content: '\25c2';
+				margin-right: ms(-1);
+			}
+		}
+
+		&:last-of-type {
+			margin-left: ms(-1);
+			&:after {
+				content: '\25b8';
+				margin-left: ms(-1);
+			}
+		}
+	}
+
+	@media (max-width: $goldenBreakpoint) { text-align: center; }
+}

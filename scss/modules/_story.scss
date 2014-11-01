@@ -7,26 +7,6 @@ Article
 $contentBr1: 520px;
 $contentBr2: $goldenBreakpoint;
 
-.home-feed { @extend .clearfix; }
-
-.story-details {
-	a,
-	time {
-		text-decoration: none;
-
-		&:before {
-			content: ' / ';
-			opacity: .6;
-		}
-	}
-
-}
-
-.feed {
-	* + * { margin-top: ms(1); }
-	>*:last-child { margin-bottom: 0; }
-}
-
 .story {
 	padding: ms(1) $paddingH;
 	position: relative;
@@ -39,15 +19,72 @@ $contentBr2: $goldenBreakpoint;
 	.feed & {
 		text-align: left;
 		overflow: hidden;
+		background: none !important;
+		padding: 0;
 
+		header { *:last-child { margin: 0 !important; } }
 
+		.image {
+			margin: 0 auto;
+			img {
 
-		header {
-			*:last-child { margin: 0 !important; }
+				width: 100%;
+				height: auto;
+			}
+			@media (max-width: $contentBr1) { margin-top: 1em; }
 		}
 
 		a { text-decoration: none; }
 
+
+		@media (min-width: $contentBr1) {
+			border: none;
+			width: 50%;
+			float: left;
+			margin-top: 0;
+			padding: 0;
+
+			&:nth-of-type(odd) {
+				clear: left;
+				padding-right: $paddingH/2;
+			}
+			&:nth-of-type(even) {
+				padding-left: $paddingH/2;
+			}
+		}
+
+		@media (max-width: $contentBr2) {
+			border-top: 1px solid $acBorderColor;
+		}
+
+		@media (min-width: $contentBr2) {
+			border-bottom: 1px solid $acBorderColor;
+			display: table;
+			width: 100%;
+			float: none;
+			clear: both;
+
+			padding: 2em $paddingH/2;
+
+			header,
+			.image {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.image {
+				width: 23.6%;
+				max-width: 280px;
+			}
+			header {
+				padding: 0;
+				padding-left: 6.18%;
+			}
+		}
+
+
+
+
+		/* Heading Behaviour */
 		h1 {
 			@extend .h4;
 			font-weight: 500;
@@ -55,282 +92,12 @@ $contentBr2: $goldenBreakpoint;
 			line-height: 1em;
 		}
 
-		h6 { margin-left: 3px; }
-
-		@media (min-width: $tablet) {
-
-			&.featured {
-				h1 {
-					//font-size: ms(3);
-					//margin-bottom: ms(-4);
-				}
-				h6 { font-size: $bodyFontSize2; }
-			}
-		}
-
 		@media (min-width: $contentBr2) {
 			h1 { font-size: 2em }
 			.body { @include visually-hidden() }
 		}
 
-		@media (min-width: 1240px) {
-			h1 { font-size: ms(2) }
-		}
+		@media (min-width: 1240px) { h1 { font-size: ms(2) } }
 
-
-	}
-
-
-
-
-	border-top: 1px solid $acBorderColor;
-	background: none !important;
-	padding: 0;
-
-	.image {
-		margin: 0 auto;
-		img {
-
-			width: 100%;
-			height: auto;
-		}
-	}
-
-	@media (max-width: $contentBr1) {
-		.image { margin-top: 1em; }
-	}
-
-	@media (min-width: $contentBr1) {
-		border: none;
-		width: 50%;
-		float: left;
-		margin-top: 0;
-		padding: 0;
-
-		&:nth-of-type(odd) {
-			clear: left;
-			padding-right: $paddingH/2;
-		}
-		&:nth-of-type(even) {
-			padding-left: $paddingH/2;
-		}
-	}
-
-	@media (min-width: $contentBr2) {
-		display: table;
-		width: 100%;
-		float: none;
-		clear: both;
-
-		padding: 2em $paddingH/2;
-		border-top: 1px solid $acBorderColor;
-
-		header,
-		.image {
-			display: table-cell;
-			vertical-align: middle;
-		}
-		.image {
-			width: 23.6%;
-			max-width: 280px;
-		}
-		header {
-			padding: 0;
-			padding-left: 6.18%;
-		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Image based Layout */
-
-.image-based .story {
-	color: white;
-
-	div.image, img { display: none !important; }
-
-	// Border
-
-	border-right: 1px solid whitesmoke;
-	border-bottom: 1px solid whitesmoke;
-
-	// Before tablet size
-
-	@media (max-width: $tablet) {
-		&.featured { padding: 25vh $paddingH; }
-
-		&.noticias:after { @include overlayDatShit(black, .25) }
-		&.articulos:after { @include overlayDatShit(black, .25) }
-		&.entrevistas:after { @include overlayDatShit(black, .25) }
-		&.conciertos:after { @include overlayDatShit(black, .25) }
-		&.criticas:after { @include overlayDatShit(black, .25) }
-		&.opinion:after { @include overlayDatShit(black, .25) }
-		&.tendencias:after { @include overlayDatShit(black, .25) }
-
-		.home-feed & {
-			&.noticias:after { @include overlayDatShit(darken($noticias, 10%), .5) }
-			&.articulos:after { @include overlayDatShit(darken($articulos, 10%), .5) }
-			&.entrevistas:after { @include overlayDatShit(darken($entrevistas, 10%), .5) }
-			&.conciertos:after { @include overlayDatShit(darken($conciertos, 10%), .5) }
-			&.criticas:after { @include overlayDatShit(darken($criticas, 10%), .5) }
-			&.opinion:after { @include overlayDatShit(darken($opinion, 10%), .5) }
-			&.tendencias:after { @include overlayDatShit($tendencias, .5) }
-		}
-	}
-	@media (min-width: $tablet) {
-		&:after {
-			@include overlayDatShit(black);
-			background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
-		}
-
-
-		// Colorizing
-
-		&.noticias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
-		&.articulos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
-		&.entrevistas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
-		&.conciertos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
-		&.criticas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
-		&.opinion:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
-		&.tendencias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(black, .75)); }
-
-		.home-feed & {
-
-			&.noticias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($noticias, 10%), .2)); }
-			&.articulos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($articulos, 10%), .2)); }
-			&.entrevistas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($entrevistas, 10%), .2)); }
-			&.conciertos:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($conciertos, 10%), .2)); }
-			&.criticas:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($criticas, 10%), .2)); }
-			&.opinion:after { @include gradient(bottom, rgba(0,0,0,0), fade-out(darken($opinion, 10%), .2)); }
-			&.tendencias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out($tendencias, .2)); }
-		}
-	}
-
-	.no-touch & {
-
-		&:before {
-			@include overlayDatShit(black, .9);
-			z-index: index($boysBandIndex, justinBieber);
-		}
-
-
-		// For Effect
-		img { transition: transform $acTransSpeed $acTransEasing; }
-		&:before { transition: background-color $acTransSpeed $acTransEasing; }
-
-		&:hover {
-			img { transform: translateX(-2%) scale(1.05); }
-			&:before { background-color: rgba(0,0,0,0); }
-		}
-	}
-}
-
-/* First Article Layout */
-
-.feed .featured-wrap {
-	@extend .clearfix;
-	.banner-holder {
-		margin: 0;
-		a { margin: 0 auto; }
-	}
-
-	@media (max-width: $contentBr1) {
-		> .story {
-			border: none;
-			.image { margin: 0; }
-			header, .body { padding: 0 6.18%; }
-		}
-	}
-	@media (min-width: $contentBr1) {
-		.banner-holder { margin: ms(2) $paddingH/2 0; }
-	}
-}
-
-@media (min-width: $contentBr1) and (max-width: $contentBr2) {
-	.featured-wrap {
-		padding: ms(1) $paddingH/2;
-
-		> * { float: left; }
-
-		> .story {
-			width: 60%;
-			padding: 0 $paddingH/2;
-
-			h1 { font-size: ms(2); }
-		}
-		.wrap {
-			width: 40%;
-			clear: none;
-			padding: 0 $paddingH/2;
-			margin: 0;
-
-			.story {
-				width: 100%;
-				clear: both;
-				padding: 0 !important;
-			}
-
-			> * + * { margin-top: ms(2); }
-		}
-
-		.banner-holder a { max-width: none; }
-	}
-}
-
-@media (min-width: $contentBr2) {
-	.featured-wrap > .story { padding: 2em $paddingH }
-}
-
-
-
-/*
-@media (min-width: $contentBr2) {
-
-	.image-based {
-
-		.story {
-			@include square(50%);
-			float: left;
-
-			border-right: 1px solid $acBorderColor;
-
-			&.featured {
-				width: 100%;
-				height: 75%;
-				clear: left;
-				//border-color: transparent;
-			}
-		}
-
-		// Layout
-		&.no-flexbox .story {
-			padding: (25vh)/2 $paddingH;
-			&.featured { padding: (50vh)/2 $paddingH; }
-		}
-
-		&.flexbox .story {
-			display: flex;
-
-		  // To the Left
-		  align-items: flex-end;
-		  justify-content: flex-start;
-		}
-	}
-}
-*/

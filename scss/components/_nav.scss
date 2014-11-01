@@ -112,6 +112,8 @@ $distance: 50%;
 
 	.navOpen{
 
+		.head-wrapper { z-index: 1; }
+
 		#nav {
 			overflow-y: scroll;
 			-webkit-overflow-scrolling: touch;
@@ -143,15 +145,17 @@ $distance: 50%;
 		position: fixed;
 		height: 100%;
 		width: $columnWidth;
+
+		opacity: 0;
+		z-index: -1;
+		transition: opacity $acTransSpeed, z-index $acTransSpeed;
 	}
 
 	#nav {
 		top: 0;
 		width: 100%;
-		opacity: 0;
-		transition: opacity $acTransSpeed;
 	}
-	.navOpen #nav { opacity: 1; }
+	.navOpen .head-wrapper { opacity: 1; z-index: auto; }
 
 	nav.filter {
 		height: 100% - $golden;

@@ -53,6 +53,10 @@ Featured Feed Layout
 	}
 
 	@media (min-width: $contentBr2) {
-		> .story { padding: 2em $paddingH }
+		padding: 0 $paddingH;
+		.wrap { padding: 0; }
+
+		.wrap .story,
+		> .story { padding: 2em 0; }
 	}
 }
