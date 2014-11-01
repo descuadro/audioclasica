@@ -15,7 +15,7 @@
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-2') ) : ?>
 <?php endif; ?>
 
-<div id="extra-1">
+<!-- <div id="extra-1">
 	<a href="#" class="extra">
         <picture>
             <source srcset="http://lorempixel.com/350/332/abstract/" media="(min-width: 1024px)">
@@ -24,6 +24,8 @@
         </picture>
 	</a>
 </div>
+
+-->
 
 <div id="extra-2">
 	<a href="#" class="extra">
