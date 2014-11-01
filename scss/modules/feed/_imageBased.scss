@@ -17,7 +17,7 @@ Image Based Feed
 		border-bottom: 1px solid whitesmoke;
 
 		// Before tablet size
-
+		/*
 		@media (max-width: $tablet) {
 			&.featured { padding: 25vh $paddingH; }
 
@@ -67,6 +67,7 @@ Image Based Feed
 				&.tendencias:after { @include gradient(bottom, rgba(0,0,0,0), fade-out($tendencias, .2)); }
 			}
 		}
+		*/
 	}
 
 	@media (min-width: $contentBr2) {

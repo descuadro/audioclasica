@@ -1,0 +1,14 @@
+/*
+
+Theming
+
+*/
+
+.category-4 {
+	header[role="banner"] {
+		background: $acPalette4;
+	}
+
+	.feed .story { border-color: fade-out( $acPalette4, .8 ); }
+	//.story-details { color: darken( $acPalette4, 20% ) }
+}

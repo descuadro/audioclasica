@@ -2,6 +2,7 @@
 
 Feed
 
+
 */
 
 .feed {
@@ -13,17 +14,20 @@ Feed
 
 
 	> header {
-		padding: 0 $paddingH 1em;
+		padding: ms(-2) $paddingH;
+		text-align: center;
+		color: white;
+		> * { color: inherit !important; }
+		background: $acBlack;
+
 		h1 {
-			@extend .h2;
+			@extend .h6;
 			margin-bottom: 0;
 		}
-		h2 {
-			@extend .h5;
-			margin-bottom: -(ms(-1));
-		}
 
-		@media (min-width: $goldenBreakpoint) { padding-top: 2em; }
+		& + * { margin: 0; }
+
+		@media (min-width: $goldenBreakpoint) { @include visually-hidden(); }
 	}
 
 	.wrap {
