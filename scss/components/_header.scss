@@ -7,7 +7,9 @@ Header
 $headerBreakpoint: $goldenBreakpoint;
 
 header[role="banner"] {
-  background: whitesmoke;
+  background: $acBlack;
+  color: white;
+
 	position: relative;
 	text-align: left;
   height: $mobileHeaderHeight;
@@ -62,7 +64,6 @@ header[role="banner"] {
 
     height: 100%;
     width: $headerWidth;
-    background: whitesmoke;
     border-right: 1px solid $acBorderColor;
     padding: 0;
 

@@ -81,12 +81,6 @@ get_header(); ?>
 	</nav>
 </section>
 
-<aside class="sidebar">
-	<div class="banner-holder"></div>
-	<div class="banner-holder"></div>
-	<div class="banner-holder"></div>
-</aside>
-
 <!-- #primary -->
 <?php get_footer(); ?>
 

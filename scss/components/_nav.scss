@@ -10,10 +10,12 @@ $navBreakpoint: $goldenBreakpoint;
 
 #nav,
 nav.filter {
-	background: whitesmoke;
+	$acBorderColor: lighten($acBlack, 10%);
+
+	background: $acBlack;
+	color: white;
 
 	ul {
-		background: whitesmoke;
 		padding: 1em 0;
 		border-bottom: 1px solid $acBorderColor;
 	}
@@ -64,7 +66,6 @@ nav.filter {
 		header {
 			@include clearfix;
 			padding: 1.5em;
-			background: whitesmoke;
 			border-bottom: 1px solid $acBorderColor;
 
 			h1 {
