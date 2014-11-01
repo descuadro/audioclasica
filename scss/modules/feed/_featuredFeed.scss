@@ -6,10 +6,6 @@ Featured Feed Layout
 
 .feed .featured-wrap {
 	@extend .clearfix;
-	.banner-holder {
-		margin: 0;
-		a { margin: 0 auto; }
-	}
 
 	@media (max-width: $contentBr1) {
 		> .story {

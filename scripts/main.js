@@ -21,6 +21,8 @@ $('.navicon').click(function() {
 	else {
 		body.removeClass('navOpen');
 	}
+
+	$(this).toggleClass('is-active');
 });
 
 $('.sorticon').click(function() {

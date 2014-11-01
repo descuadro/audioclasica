@@ -12,7 +12,6 @@ get_header(); ?>
 	<?php if (is_category()): ?>
 
 		<header>
-			<h2>Categoría</h2>
 			<h1><?php single_cat_title( '', true ); ?></h1>
 		</header>
 

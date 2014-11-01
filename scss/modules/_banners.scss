@@ -27,6 +27,7 @@ $br2: 1023px;
 
 	.feed & { margin: ms(2) 0; }
 	.sidebar & { border-bottom: 1px solid $acBorderColor; }
+	.featured & { margin-bottom: 0; display: block; }
 
 	a {
 		display: block;

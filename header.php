@@ -46,16 +46,14 @@
 
     <div class="page-container">
         <header role="banner">
-            <div class="wrapper">
-                <div class="logo-holder">
-                    <h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Audioclásica</a></h1>
-                </div>
-
-                <nav class="toggle-nav">
-                    <button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon entypo-menu"></button>
-                    <button type="button" role="button" aria-label="Toggle Sorting" class="transformicon sorticon entypo-dot-3"></button>
-                </nav>
+            <div class="logo-holder">
+                <h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Audioclásica</a></h1>
             </div>
+
+            <nav class="toggle-nav">
+                <button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon entypo-menu"></button>
+                <button type="button" role="button" aria-label="Toggle Sorting" class="transformicon sorticon entypo-dot-3"></button>
+            </nav>
         </header>
 
         <div class="head-wrapper">

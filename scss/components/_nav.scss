@@ -10,7 +10,7 @@ $navBreakpoint: $goldenBreakpoint;
 
 #nav,
 nav.filter {
-	$acBorderColor: lighten($acBlack, 10%);
+  $acBorderColor: $acDarkGray;
 
 	background: $acBlack;
 	color: white;
@@ -31,6 +31,8 @@ nav.filter {
 		margin: 0;
 		padding: ms(-2) 0;
 		text-decoration: none;
+
+		color: inherit;
 	}
 
 	.legal a { padding: ms(-3) 0; }

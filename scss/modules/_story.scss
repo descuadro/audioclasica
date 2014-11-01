@@ -21,6 +21,7 @@ $contentBr2: $goldenBreakpoint;
 		overflow: hidden;
 		background: none !important;
 		padding: 0;
+		overflow: visible;
 
 		header { *:last-child { margin: 0 !important; } }
 
@@ -82,8 +83,6 @@ $contentBr2: $goldenBreakpoint;
 		}
 
 
-
-
 		/* Heading Behaviour */
 		h1 {
 			@extend .h4;
@@ -101,3 +100,11 @@ $contentBr2: $goldenBreakpoint;
 
 	}
 }
+
+
+
+/* After pagination behaviour */
+@media (max-width: $goldenBreakpoint) {
+	.feed .pagination ~ .story { margin: ms(1) $paddingH 0; }
+}
+
