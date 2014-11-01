@@ -27,8 +27,6 @@ header[role="banner"] {
     @include position(0,0,0,0);
     text-align: center;
     z-index: -1;
-
-    display: none;
   }
 
   nav.toggle-nav { width: 100%; }
