@@ -4,8 +4,6 @@
  *
  * @package themeHandle
  */
-
-$post_classes = array( 'story', );
 get_header(); ?>
 
 <section class="feed" <?php if ( is_home() ): ?>id="home-feed"<?php endif ?>>
@@ -29,6 +27,8 @@ get_header(); ?>
 						if ($thumbnail) (string)$thumbnail = $thumbnail[0];
 					}
     	}
+    	$post_cat = 'cat-'.get_first_category_ID();
+    	$post_classes = array( 'story', $post_cat, );
 		?>
 
 		<?php #If first post, open featured loop ?>

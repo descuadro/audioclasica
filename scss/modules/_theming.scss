@@ -11,4 +11,8 @@ Theming
 		header[role="banner"] { background: nth($acColorList, $i); }
 		.feed .story { border-color: fade-out( nth($acColorList, $i), .8 ); }
 	}
+
+	.cat-#{$i} {
+		.story-details { color: nth($acColorList, $i); }
+	}
 }

@@ -244,5 +244,12 @@ function custom_infinite_scroll_js() {
 }
 add_action( 'wp_footer', 'custom_infinite_scroll_js',100 );
 
+
+// get the first category id
+function get_first_category_ID() {
+	$category = get_the_category();
+	return $category[0]->cat_ID;
+}
+
 ?>
 
