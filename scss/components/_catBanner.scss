@@ -6,7 +6,7 @@ Category Banner
 
 .catBanner {
 
-	background: whitesmoke;
+	background: $acWhite;
 
 	h1 {
 		@extend .h2;
@@ -52,7 +52,7 @@ nav.filter { width: 100%; }
 		}
 
 		border-bottom: 1px solid $acBorderColor;
-		background: whitesmoke;
+		background: $acWhite;
 	}
 
 	.navicon {

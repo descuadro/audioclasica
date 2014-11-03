@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<section id="primary" role="main">
+<section class="feed">
 
 	<article id="post-0" class="post error404 not-found">
 		<header class="entry-header">
