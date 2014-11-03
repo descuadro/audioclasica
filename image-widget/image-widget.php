@@ -314,10 +314,10 @@ class Tribe_Image_Widget extends WP_Widget {
 			$output .= wp_get_attachment_image($instance['attachment_id'], $size, false, $attr);
 		}
 
-		if ( $include_link && !empty( $instance['link'] ) ) {
-			#$output .= '</picture>';
-			#$output .= '</a>';
-		}
+		#if ( $include_link && !empty( $instance['link'] ) ) {
+		#	$output .= '</picture>';
+		#	$output .= '</a>';
+		#}
 
 		return $output;
 	}
@@ -340,12 +340,12 @@ private function get_image_html2( $instance, $include_link = true ) {
 				#'class' => 	$this->widget_options['classname'].'-image-link',
 				#'title' => ( !empty( $instance['alt'] ) ) ? $instance['alt'] : $instance['title'],
 			);
-			$attr = apply_filters('image_widget_link_attributes', $attr, $instance );
-			$attr = array_map( 'esc_attr', $attr );
+		#	$attr = apply_filters('image_widget_link_attributes', $attr, $instance );
+		#	$attr = array_map( 'esc_attr', $attr );
 			#$output = '<a';
 			#foreach ( $attr as $name => $value ) {
 			#	$output .= sprintf( ' %s="%s"', $name, $value );
-			#}
+		#	}
 			#$output .= ' class="extra"';
 			#$output .= '>';
 			#$output .= '<picture>';
@@ -427,13 +427,13 @@ private function get_image_html3( $instance, $include_link = true ) {
 			);
 			$attr = apply_filters('image_widget_link_attributes', $attr, $instance );
 			$attr = array_map( 'esc_attr', $attr );
-			#$output = '<a';
-			#foreach ( $attr as $name => $value ) {
-			#	$output .= sprintf( ' %s="%s"', $name, $value );
-			#}
-			#$output .= ' class="extra"';
-			#$output .= '>';
-			#$output .= '<picture>';
+		#	$output = '<a';
+		#	foreach ( $attr as $name => $value ) {
+		#		$output .= sprintf( ' %s="%s"', $name, $value );
+	#		}
+		#	$output .= ' class="extra"';
+		#	$output .= '>';
+		#	$output .= '<picture>';
 		}
 
 		$size = $this->get_image_size( $instance );
