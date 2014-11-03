@@ -83,6 +83,17 @@ get_header(); ?>
 
 <!-- #primary -->
 <?php get_footer(); ?>
+<!-- #images widget -->
+
+<?php
+      if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-2') ) : ?>
+<?php endif; ?>
+<?php
+      if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-3') ) : ?>
+<?php endif; ?>
+<?php
+      if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-4') ) : ?>
+<?php endif; ?>
 
 
 <script>
@@ -100,19 +111,19 @@ get_header(); ?>
 
 			enquire.register("screen and (max-width: 1023px)", {
 		    match : function() {
-		      mobileBanner1.load('<?php bloginfo('template_url'); ?>/extra.php #extra-1', function() {
+		      mobileBanner1.load('<?php bloginfo('url'); ?> #extra-1', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});
 					});
 
-					mobileBanner2.load('<?php bloginfo('template_url'); ?>/extra.php #extra-2', function() {
+					mobileBanner2.load('<?php bloginfo('url'); ?> #extra-2', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});
 					});
 
-					mobileBanner3.load('<?php bloginfo('template_url'); ?>/extra.php #extra-3', function() {
+					mobileBanner3.load('<?php bloginfo('url'); ?> #extra-3', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});
@@ -125,19 +136,19 @@ get_header(); ?>
 
 			enquire.register("screen and (min-width: 1023px)", {
 		    match : function() {
-		      sidebarBanner1.load('<?php bloginfo('template_url'); ?>/extra.php #extra-1', function() {
+		      sidebarBanner1.load('<?php bloginfo('url'); ?> #extra-1', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});
 					});
 
-					sidebarBanner2.load('<?php bloginfo('template_url'); ?>/extra.php #extra-2', function() {
+					sidebarBanner2.load('<?php bloginfo('url'); ?> #extra-2', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});
 					});
 
-					sidebarBanner3.load('<?php bloginfo('template_url'); ?>/extra.php #extra-3', function() {
+					sidebarBanner3.load('<?php bloginfo('url'); ?> #extra-3', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});
