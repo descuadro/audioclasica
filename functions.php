@@ -221,7 +221,7 @@ function sdac_previous_posts_link_attributes(){
 /**
  * Infinite Scroll
  */
-
+/*
 function custom_infinite_scroll_js() {
 	if( ! is_singular() ) { ?>
 	<script>
@@ -236,13 +236,22 @@ function custom_infinite_scroll_js() {
 			"itemSelector":"article",
 			"contentSelector":".feed",
 			"animate":"true"
-		};
+		},
+	  state: {
+	    isDuringAjax: false,
+	    isInvalidPage: false,
+	    isDestroyed: false,
+	    isDone: true
+	    isPaused: false,
+	    currPage: 1
+	  };
 		jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
 	</script>
 	<?php
 	}
 }
 add_action( 'wp_footer', 'custom_infinite_scroll_js',100 );
+*/
 
 
 // get the first category id
@@ -250,6 +259,7 @@ function get_first_category_ID() {
 	$category = get_the_category();
 	return $category[0]->cat_ID;
 }
+
 
 ?>
 

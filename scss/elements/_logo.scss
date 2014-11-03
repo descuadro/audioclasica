@@ -7,6 +7,17 @@ Site Logo
 .site-logo {
 	font-weight: 500;
 	white-space: nowrap;
-	@extend .h5;
-	letter-spacing: 3px;
+	color: inherit;
+
+	header[role="banner"] & { @extend .h5; }
+
+	// Cool thing:
+	/*
+	font-size: 3em;
+	@media (max-width: $goldenBreakpoint) {
+   font-size: $bodyFontSize2;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+	}
+	*/
 }
