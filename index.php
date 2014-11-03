@@ -83,7 +83,8 @@ get_header(); ?>
 
 <!-- #primary -->
 <?php get_footer(); ?>
-<!-- #images widget -->
+
+<!-- #images widgets -->
 
 <div style="display:none;">
 <?php
