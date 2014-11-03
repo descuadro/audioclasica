@@ -85,6 +85,7 @@ get_header(); ?>
 <?php get_footer(); ?>
 <!-- #images widget -->
 
+<div style="display:none;">
 <?php
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-2') ) : ?>
 <?php endif; ?>
@@ -94,6 +95,7 @@ get_header(); ?>
 <?php
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-4') ) : ?>
 <?php endif; ?>
+</div>
 
 
 <script>
