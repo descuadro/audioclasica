@@ -86,10 +86,13 @@ get_header(); ?>
 
 <!-- #images widgets -->
 
+
 <div style="display:none;">
+<!--
 <?php
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-2') ) : ?>
 <?php endif; ?>
+
 <?php
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-3') ) : ?>
 <?php endif; ?>
@@ -98,6 +101,19 @@ get_header(); ?>
 <?php endif; ?>
 </div>
 
+<?php if( is_category ('jazz') ) : ?>
+	<h1> bla</h1>
+<?php endif; ?>
+
+-->
+<?php $sidebar_id = ( is_category() ) ? sanitize_title( get_cat_name( get_query_var( 'cat' ) ) ) . '-sidebar' : 'sidebar-2';
+dynamic_sidebar( $sidebar_id ); ?>
+
+</div>
+
+
+
+<!-- #image widgets .js -->
 
 <script>
 	var feed = $('.feed'),
@@ -114,7 +130,7 @@ get_header(); ?>
 
 			enquire.register("screen and (max-width: 1023px)", {
 		    match : function() {
-		      mobileBanner1.load('<?php bloginfo('url'); ?> #extra-1', function() {
+		      mobileBanner1.load(' #extra-1', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});
@@ -139,7 +155,7 @@ get_header(); ?>
 
 			enquire.register("screen and (min-width: 1023px)", {
 		    match : function() {
-		      sidebarBanner1.load('<?php bloginfo('url'); ?> #extra-1', function() {
+		      sidebarBanner1.load(' #extra-1', function() {
 						$(this).imagesLoaded( function() {
 							picturefill();
 						});

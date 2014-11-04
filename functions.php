@@ -100,8 +100,36 @@ function themeFunction_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => ''
 	));
+
 }
 add_action( 'widgets_init', 'themeFunction_widgets_init' );
+
+add_action( 'widgets_init', 'category_sidebars' );
+/**
+ * Create widgetized sidebars for each category
+ *
+ * This function is attached to the 'widgets_init' action hook.
+ *
+ * @uses	register_sidebar()
+ * @uses	get_categories()
+ * @uses	get_cat_name()
+ */
+function category_sidebars() {
+	$categories = get_categories( array( 'hide_empty'=> 0 ) );
+
+	foreach ( $categories as $category ) {
+		if ( 0 == $category->parent )
+			register_sidebar( array(
+				'name' => $category->cat_name,
+				'id' => $category->category_nicename . '-sidebar',
+				'description' => 'This is the ' . $category->cat_name . ' widgetized area',
+				'before_widget' => '<div id="extra-1">',
+				'after_widget' => '',
+				'before_title' => '',
+				'after_title' => '',
+			) );
+	}
+}
 
 
 /* ENQUEUE SCRIPTS & STYLES
