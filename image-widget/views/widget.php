@@ -12,5 +12,5 @@ echo $before_widget;
 echo $this->get_image_html( $instance, true );
 echo $this->get_image_html2( $instance, true );
 echo $this->get_image_html3( $instance, true );
-echo "</div>";
+echo $after_widget;
 ?>
