@@ -4,7 +4,7 @@
  * See the readme.txt file for more info.
  */
 
-// Block direct requests
+// Block direct requestz
 if ( !defined('ABSPATH') )
 	die('-1');
 
