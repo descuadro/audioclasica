@@ -45,6 +45,10 @@ function themeFunction_setup() {
 	add_image_size('Banner 2 mid',600,770,true);
 	add_image_size('Banner 3 mid',600,900,true);
 
+	// New infinite scroll
+	add_action('wp_ajax_infinite_scroll', 'wp_infinitepaginate');           // for logged in user
+	add_action('wp_ajax_nopriv_infinite_scroll', 'wp_infinitepaginate');    // if user not logged in
+
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
 		'comment-list',
@@ -58,6 +62,13 @@ function themeFunction_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'themeFunction_setup' );
+
+// Remove images from excerpt
+	function remove_images( $content ) {
+   $postOutput = preg_replace('/<img[^>]+./','', $content);
+   return $postOutput;
+}
+add_filter( 'the_content', 'remove_images', 100 );
 
 
 /* SIDEBARS & WIDGET AREAS
@@ -263,5 +274,18 @@ function get_first_category_ID() {
 	return $category[0]->cat_ID;
 }
 
+// Infinite Scroll new
+
+function wp_infinitepaginate(){
+    $loopFile        = $_POST['loop_file'];
+    $paged           = $_POST['page_no'];
+    $posts_per_page  = get_option('posts_per_page');
+ 
+    # Load the posts
+    query_posts(array('paged' => $paged ));
+    get_template_part( $loopFile );
+ 
+    exit;
+}
 
 ?>

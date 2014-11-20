@@ -61,11 +61,13 @@ get_header(); ?>
 
 					</h6>
 					<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+					<?php the_content(); ?>
+					<p align="right"><a href="<?php the_permalink() ?>"><strong>más <small><small>>></small></small></strong></a></p>
+					<div class="body">
+						bla
+					</div>
+				
 				</header>
-
-				<?php if ( $wp_query->current_post == 0 ): ?>
-					<div class="body"><?php the_excerpt(); ?></div>
-				<?php endif ?>
 
 			</article>
 
@@ -76,9 +78,11 @@ get_header(); ?>
 		<?php if( $wp_query->current_post == 2  ) echo '</div>'."\n"; ?>
 	<?php endwhile; // end of the loop. ?>
 
+<!--
 	<nav class="pagination">
 		<?php posts_nav_link(' ... ', 'Anterior', 'Siguiente'); ?>
 	</nav>
+-->
 </section>
 
 <!-- #primary -->
@@ -178,4 +182,43 @@ dynamic_sidebar( $sidebar_id ); ?>
 		    }
 			});
 </script>
+
+<!-- New infinite scroll -->
+<?php if (!is_single() || !is_page()): ?>
+
+<script type="text/javascript">
+            $(window).scroll(function(){
+                    if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+                          // run our call for pagination
+                    }
+            });
+</script>
+<script type="text/javascript">
+      jQuery(document).ready(function($) {
+          var count = 2;
+          $(window).scroll(function(){
+                  if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+                     loadArticle(count);
+                     count++;
+                  }
+          });
+ 
+          function loadArticle(pageNumber){   
+                  $('a#inifiniteLoader').show('fast');
+                  $.ajax({
+                      url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
+                      type:'POST',
+                      data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop',
+                      success: function(html){
+                          $('a#inifiniteLoader').hide('1000');
+                          $("#home-feed").append(html);    // This will be the div where our content will be loaded
+                      }
+                  });
+              return false;
+          }
+   
+      });
+      
+  </script>
+<?php endif; ?>
 
