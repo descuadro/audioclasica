@@ -23,7 +23,6 @@ Golden Layout
 		margin-right: $sidebarWidth;
 		transition: transform $acTransSpeed;
 
-		.navOpen & { transform: translateX( $columnWidth - $headerWidth ); }
 	}
 
 

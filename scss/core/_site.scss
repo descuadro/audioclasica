@@ -34,3 +34,9 @@ body {
 			overflow-x: hidden;
 	}
 }
+
+main[role="main"] {
+	z-index: 2;
+	position: relative;
+	background: white;
+}

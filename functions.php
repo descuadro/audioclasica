@@ -280,4 +280,3 @@ function get_first_category_ID() {
 
 
 ?>
-

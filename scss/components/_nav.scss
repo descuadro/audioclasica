@@ -87,15 +87,14 @@ nav.filter {
 		.legal a,
 		.nav-block a,
 		header {
-			padding-left: $padding2;
-			padding-right: $padding2;
+			padding: 0 $padding2;
 
 			h1 { font-size: ms(1); }
 		}
 	}
 }
 
-#nav { z-index: index($boysBandIndex, jonasBrothers); }
+//#nav { z-index: index($boysBandIndex, jonasBrothers); }
 
 
 
@@ -107,15 +106,21 @@ $distance: 50%;
 
 .js {
 
+
+		main { transition: transform $acTransSpeed; }
+
 	#nav {
 		@include position($mobileHeaderHeight,0,0,0);
 		height: 100%;
-		z-index: 2;
+		//z-index: 3;
 	}
 
 	.navOpen{
+		main {
+			transform: translateX( $columnWidth - $headerWidth );
+		}
 
-		.head-wrapper { z-index: 1; }
+		//.head-wrapper { z-index: 1; }
 
 		#nav {
 			overflow-y: scroll;
@@ -123,7 +128,7 @@ $distance: 50%;
 		}
 	}
 }
-
+/*
 @media (max-width: $navBreakpoint) {
 	#nav { width: 100%; }
 
@@ -141,30 +146,27 @@ $distance: 50%;
 }
 
 }
+*/
 
-@media (min-width: $navBreakpoint) {
+//@media (min-width: $navBreakpoint) {
 
 	.head-wrapper {
 		position: fixed;
 		height: 100%;
 		width: $columnWidth;
-
-		opacity: 0;
-		z-index: -1;
-		transition: opacity $acTransSpeed, z-index $acTransSpeed;
 	}
 
 	#nav {
 		top: 0;
 		width: 100%;
+		transition: transform $acTransSpeed;
 	}
-	.navOpen .head-wrapper { opacity: 1; z-index: auto; }
 
 	nav.filter {
 		height: 100% - $golden;
 		ul { min-height: 100%; }
 	}
-}
+//}
 
 
 
