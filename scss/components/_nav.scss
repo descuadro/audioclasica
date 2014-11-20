@@ -65,6 +65,9 @@ nav.filter {
 
 	@media (min-width: $navBreakpoint) {
 
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+
 		header {
 			@include clearfix;
 			padding: 1.5em;
@@ -87,14 +90,12 @@ nav.filter {
 		.legal a,
 		.nav-block a,
 		header {
-			padding: 0 $padding2;
+			padding: 1em $padding2;
 
 			h1 { font-size: ms(1); }
 		}
 	}
 }
-
-//#nav { z-index: index($boysBandIndex, jonasBrothers); }
 
 
 
@@ -107,48 +108,21 @@ $distance: 50%;
 .js {
 
 
-		main { transition: transform $acTransSpeed; }
+	main { transition: transform $acTransSpeed; }
+
+	.head-wrapper {
+		position: absolute;
+		height: 100%;
+		width: $columnWidth;
+	}
 
 	#nav {
-		@include position($mobileHeaderHeight,0,0,0);
-		height: 100%;
-		//z-index: 3;
+		padding-top: $mobileHeaderHeight;
 	}
 
 	.navOpen{
-		main {
-			transform: translateX( $columnWidth - $headerWidth );
-		}
-
-		//.head-wrapper { z-index: 1; }
-
-		#nav {
-			overflow-y: scroll;
-			-webkit-overflow-scrolling: touch;
-		}
+		main { transform: translateX( $columnWidth - $headerWidth ); }
 	}
-}
-/*
-@media (max-width: $navBreakpoint) {
-	#nav { width: 100%; }
-
-.js {
-	#nav {
-		transition: transform $acTransSpeed;
-		transform: translateX(-100%);
-		position: absolute;
-		header { @include visually-hidden(); }
-	}
-
-	.navOpen #nav {
-		transform: translateX(0);
-	}
-}
-
-}
-*/
-
-//@media (min-width: $navBreakpoint) {
 
 	.head-wrapper {
 		position: fixed;
@@ -156,19 +130,12 @@ $distance: 50%;
 		width: $columnWidth;
 	}
 
-	#nav {
-		top: 0;
-		width: 100%;
-		transition: transform $acTransSpeed;
-	}
 
 	nav.filter {
 		height: 100% - $golden;
 		ul { min-height: 100%; }
 	}
-//}
-
-
+}
 
 
 

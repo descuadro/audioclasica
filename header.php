@@ -50,7 +50,7 @@
                 <h1 class="site-logo">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                         Audioclásica
-                        <?php if (is_category()): ?> - <span class="cat-title"><?php single_cat_title( '', true ); ?></span><?php endif ?>
+                        <!--  <?php if (is_category()): ?> - <span class="cat-title"><?php single_cat_title( '', true ); ?></span><?php endif ?> -->
                     </a>
                 </h1>
             </div>

@@ -55,7 +55,7 @@ $contentBr2: $goldenBreakpoint;
 		}
 
 		@media (max-width: $contentBr2) {
-			border-top: 1px solid $acBorderColor;
+			//border-top: 1px solid $acBorderColor;
 		}
 
 		@media (min-width: $contentBr2) {

@@ -150,14 +150,6 @@ function themeFunction_scripts() {
 	);
 
 	wp_enqueue_script(
-		'infinite-scroll',
-		get_template_directory_uri() . '/bower_components/jquery-infinite-scroll/jquery.infinitescroll.js',
-		array('jquery'),
-		'2.1.0',
-		true
-	);
-
-	wp_enqueue_script(
 		'enquire',
 		get_template_directory_uri() . '/bower_components/enquire/dist/enquire.js',
 		array('jquery'),
@@ -263,41 +255,6 @@ add_filter('previous_posts_link_attributes', 'sdac_previous_posts_link_attribute
 function sdac_previous_posts_link_attributes(){
         return 'class="newer"';
 }
-
-/**
- * Infinite Scroll
- */
-/*
-function custom_infinite_scroll_js() {
-	if( ! is_singular() ) { ?>
-	<script>
-		var infinite_scroll = {
-			loading: {
-				img: "<?php echo get_template_directory_uri(); ?>/assets/images/loading.gif",
-				msgText: "<?php _e( 'Cargando más historias...', 'custom' ); ?>",
-				finishedMsg: "<?php _e( 'Enhorabuena! Llegó usted al fondo del océano!', 'custom' ); ?>"
-			},
-			"nextSelector":".pagination .older",
-			"navSelector":".pagination",
-			"itemSelector":"article",
-			"contentSelector":".feed",
-			"animate":"true"
-		},
-	  state: {
-	    isDuringAjax: false,
-	    isInvalidPage: false,
-	    isDestroyed: false,
-	    isDone: true
-	    isPaused: false,
-	    currPage: 1
-	  };
-		jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
-	</script>
-	<?php
-	}
-}
-add_action( 'wp_footer', 'custom_infinite_scroll_js',100 );
-*/
 
 
 // get the first category id

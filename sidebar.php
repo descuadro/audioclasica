@@ -7,10 +7,12 @@
 
 ?>
 	<nav role="navigation" id="nav">
+		<!--
 		<header>
 			<h1 class="site-logo">Audioclásica</h1>
 			<button type="button" role="button" aria-label="Toggle Navigation" class="transformicon navicon entypo-cancel">
 		</header>
+		 -->
 
 		<div class="nav-block">
 			<a href="#" class="toggle" data-toggle="image-based">Imagen / Texto</a>
@@ -62,7 +64,7 @@
 			<?php get_links('-1', '<li><span>', '</span></li>', '', FALSE, 'id', FALSE,
 				FALSE, -1, TRUE, TRUE); ?>
 		</ul>
-		
+
 	</nav>
 <!-- #secondary .widget-area -->
 

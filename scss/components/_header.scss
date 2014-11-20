@@ -15,7 +15,11 @@ header[role="banner"] {
 	position: relative;
 	text-align: left;
   height: $mobileHeaderHeight;
-  //padding: ms(-1) $paddingH;
+
+
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 
   border-bottom: 1px solid $acBorderColor;
 
@@ -26,87 +30,42 @@ header[role="banner"] {
     @include square(100%);
     @include position(0,0,0,0);
     text-align: center;
-    z-index: -1;
   }
 
-  nav.toggle-nav { width: 100%; }
   .category-nav { letter-spacing: none; }
 
   button.is-active { color: white; opacity: 1; }
 
-  @media (max-width: $headerBreakpoint) {
-    nav.toggle-nav {
-      display: table;
-      @include square(100%);
+  nav.toggle-nav {
+    display: table;
+    @include square(100%);
 
-      button {
-        height: 100%;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 0 $paddingH;
-        width: 50%;
-
-        &:first-of-type { text-align: left; }
-        &:last-of-type { text-align: right; }
-      }
-
-    }
-
-    h1 {
-      margin: 0 auto;
-      display: table;
+    button {
       height: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 $paddingH;
       width: 50%;
-      a {
-        display: table-cell;
-        vertical-align: middle;
-      }
+
+      &:first-of-type { text-align: left; }
+      &:last-of-type { text-align: right; }
     }
 
-    .category-nav { @include visually-hidden(); }
   }
 
-  @media (min-width: $headerBreakpoint) {
-
-    position: fixed;
-    @include position(0,auto,0,0);
-    top: 0;
-
+  .logo-holder {
+    margin: 0 auto;
+    display: table;
     height: 100%;
-    width: $headerWidth;
-    //border-right: 1px solid $acBorderColor;
-    padding: 0;
-
-    transition: transform $acTransSpeed;
-
-    .logo-holder {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-
-      height: auto;
-      @include position(auto,auto,0,0);
-      padding-bottom: ms(2);
-    }
-
-    h1 {
-      transform: rotate(270deg);
-      margin: 0;
-    }
-
-    nav.toggle-nav {
-      text-align: center;
-      padding-top: .7em;
-      button {
-        padding: .5em 0;
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    .navOpen & { transform: translateX(-100%); }
+    width: 50%;
   }
+
+  .site-logo {
+    display: table-cell;
+    vertical-align: middle;
+
+    a {  }
+  }
+
+  .category-nav { @include visually-hidden(); }
 }
