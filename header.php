@@ -62,7 +62,7 @@ function loadArticle(pageNumber) {
 <body <?php body_class(); ?>>
 
     <div class="page-container">
-        <header role="banner">
+        <header role="banner" class="big">
             <div class="logo-holder">
                 <h1 class="site-logo">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">

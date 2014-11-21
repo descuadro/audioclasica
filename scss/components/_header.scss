@@ -14,7 +14,7 @@ header[role="banner"] {
 
 	position: relative;
 	text-align: left;
-  height: $mobileHeaderHeight;
+  height: $smallHeaderHeight;
 
 
   position: fixed;
@@ -68,4 +68,23 @@ header[role="banner"] {
   }
 
   .category-nav { @include visually-hidden(); }
+
+  //Sizin'
+  transition: all $acTransSpeed;
+  opacity: .8;
+  .site-logo { transition: transform $acTransSpeed; }
+
+  filter: grayscale(0.5) blur(.001em);
+  &:hover { filter: none; }
+
+  &.big {
+    height: $bigHeaderHeight;
+    opacity: 1;
+    filter: none;
+    .site-logo { transform: scale(1.6) }
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
 }

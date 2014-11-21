@@ -185,6 +185,15 @@ function themeFunction_scripts() {
 	);
 
 	wp_enqueue_script(
+		'waypoints',
+		get_template_directory_uri() . '/bower_components/jquery-waypoints/waypoints.min.js',
+		array('jquery'),
+		'2.1.0',
+		true
+	);
+
+	//Main
+	wp_enqueue_script(
 		'main',
 		get_template_directory_uri() . '/scripts/main.js',
 		array('jquery'),
@@ -280,11 +289,11 @@ function wp_infinitepaginate(){
     $loopFile        = $_POST['loop_file'];
     $paged           = $_POST['page_no'];
     $posts_per_page  = get_option('posts_per_page');
- 
+
     # Load the posts
     query_posts(array('paged' => $paged ));
     get_template_part( $loopFile );
- 
+
     exit;
 }
 
