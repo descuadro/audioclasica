@@ -61,12 +61,10 @@ get_header(); ?>
 
 					</h6>
 					<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-					<?php the_content(); ?>
-					<p align="right"><a href="<?php the_permalink() ?>"><strong>más <small><small>>></small></small></strong></a></p>
 					<div class="body">
-						bla
+						<?php the_content(); ?>
+						<p align="right"><a href="<?php the_permalink() ?>"><strong>más <small><small>>></small></small></strong></a></p>
 					</div>
-				
 				</header>
 
 			</article>
