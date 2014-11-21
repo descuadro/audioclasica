@@ -50,6 +50,10 @@ toggleImage.click(function(e) {
 
 // Header Resizing
 
+header.waypoint(function(direction) {
+	header.toggleClass('fixie');
+});
+
 main.waypoint(function(direction) {
 	header.toggleClass('big');
 }, { offset: -50 });
