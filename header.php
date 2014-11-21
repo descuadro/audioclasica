@@ -63,6 +63,10 @@ function loadArticle(pageNumber) {
 
     <div class="page-container">
         <header role="banner" class="big">
+            <div class="banner-top">
+              <?php $sidebar_id = ( is_category() ) ? sanitize_title( get_cat_name( get_query_var( 'cat' ) ) ) . '-top' : 'banner-top';
+dynamic_sidebar( $sidebar_id ); ?>
+            </div>
             <div class="logo-holder">
                 <h1 class="site-logo">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">

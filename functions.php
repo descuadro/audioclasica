@@ -74,18 +74,19 @@ add_filter( 'the_content', 'remove_images', 100 );
 /* SIDEBARS & WIDGET AREAS
  ========================== */
 function themeFunction_widgets_init() {
-	register_sidebar(array(
-		'name' => 'Main Navigation',
-		'id'   => 'sidebar-1',
-		'description'   => 'This is a widgetized area.',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
-	));
+	/***register_sidebar(array(
+		*'name' => 'Main Navigation',
+		*'id'   => 'sidebar-1',
+		*'description'   => 'This is a widgetized area.',
+		*'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		*'after_widget'  => '</div>',
+		*'before_title'  => '<h4>',
+		*'after_title'   => '</h4>'
+	*));
+	*/
 
 	register_sidebar(array(
-		'name' => 'Banner1 frontpage',
+		'name' => 'Banner lateral pagina principal',
 		'id'   => 'sidebar-2',
 		'description'   => 'This is a widgetized area.',
 		'before_widget' => '<div id="extra-1">',
@@ -93,25 +94,36 @@ function themeFunction_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => ''
 	));
+	/**
+*register_sidebar(array(
+		*'name' => 'Banner2 frontpage',
+		*'id'   => 'sidebar-3',
+		*'description'   => 'This is a widgetized area.',
+		*'before_widget' => '<div id="extra-2">',
+		*'after_widget'  => '',
+		*'before_title'  => '',
+		*'after_title'   => ''
+	*));
+	*register_sidebar(array(
+		*'name' => 'Banner3 frontpage',
+		*'id'   => 'sidebar-4',
+		*'description'   => 'This is a widgetized area.',
+		*'before_widget' => '<div id="extra-3">',
+		*'after_widget'  => '',
+		*'before_title'  => '',
+		*'after_title'   => ''
+	*));
+	 */
 	register_sidebar(array(
-		'name' => 'Banner2 frontpage',
-		'id'   => 'sidebar-3',
+		'name' => 'Banner superior pagina principal',
+		'id'   => 'banner-top',
 		'description'   => 'This is a widgetized area.',
-		'before_widget' => '<div id="extra-2">',
+		'before_widget' => '<div id="extra-0">',
 		'after_widget'  => '',
 		'before_title'  => '',
 		'after_title'   => ''
 	));
-	register_sidebar(array(
-		'name' => 'Banner3 frontpage',
-		'id'   => 'sidebar-4',
-		'description'   => 'This is a widgetized area.',
-		'before_widget' => '<div id="extra-3">',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => ''
-	));
-
+	
 }
 add_action( 'widgets_init', 'themeFunction_widgets_init' );
 
@@ -131,10 +143,22 @@ function category_sidebars() {
 	foreach ( $categories as $category ) {
 		if ( 0 == $category->parent )
 			register_sidebar( array(
-				'name' => $category->cat_name,
+				'name' => $category->cat_name . ' lateral',
 				'id' => $category->category_nicename . '-sidebar',
 				'description' => 'This is the ' . $category->cat_name . ' widgetized area',
 				'before_widget' => '<div id="extra-1">',
+				'after_widget' => '',
+				'before_title' => '',
+				'after_title' => '',
+			) );
+	}
+	foreach ( $categories as $category ) {
+		if ( 0 == $category->parent )
+			register_sidebar( array(
+				'name' => $category->cat_name . ' superior',
+				'id' => $category->category_nicename . '-top',
+				'description' => 'This is the ' . $category->cat_name . ' widgetized area',
+				'before_widget' => '<div id="extra-0">',
 				'after_widget' => '',
 				'before_title' => '',
 				'after_title' => '',
