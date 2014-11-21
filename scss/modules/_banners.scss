@@ -7,6 +7,17 @@ Banners
 $br1: 600px;
 $br2: 1023px;
 
+.extra-top {
+
+	clear: both;
+	background: $acBlack;
+	text-align: center;
+
+	a {
+		display: inline-block;
+	}
+}
+
 .banner-1 {
 	background: black;
 

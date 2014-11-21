@@ -118,8 +118,8 @@ function themeFunction_widgets_init() {
 		'name' => 'Banner superior pagina principal',
 		'id'   => 'banner-top',
 		'description'   => 'This is a widgetized area.',
-		'before_widget' => '<div id="extra-0">',
-		'after_widget'  => '',
+		'before_widget' => '<div class="extra-top">',
+		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => ''
 	));
