@@ -34,9 +34,11 @@ $(window).scroll(function(){
 });
 
 function loadArticle(pageNumber){
-  var ajaxUrl = window.location.pathname + 'wp-admin/admin-ajax.php';
+  var ajaxUrl = window.location.pathname + 'wp-admin/admin-ajax.php',
+      loader = $('a#inifiniteLoader'),
+      isVisible = false;
 
-  $('a#inifiniteLoader').show('fast');
+  loader.show('fast');
 
   $.ajax({
     url: ajaxUrl,
@@ -44,9 +46,13 @@ function loadArticle(pageNumber){
     data: 'action=infinite_scroll&page_no='+ pageNumber + '&loop_file=loop',
 
     success: function(html){
-      $('a#infiniteLoader').hide('1000');
+      loader.hide('1000');
       $('#home-feed .pagination').before(html);
+
+      if ( loader.is(":visible") ) { isVisible = true; };
+      if ( loader.delay(2000).is(":visible") ) { $('nav#pagination').hide('1000'); };
     }
   });
+
   return false;
 }
