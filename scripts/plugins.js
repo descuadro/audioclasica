@@ -22,3 +22,31 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+
+// Infinite Scroll
+var count = 2;
+$(window).scroll(function(){
+  if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+    loadArticle(count);
+    count++;
+  }
+});
+
+function loadArticle(pageNumber){
+  var ajaxUrl = window.location.pathname + 'wp-admin/admin-ajax.php';
+
+  $('a#inifiniteLoader').show('fast');
+
+  $.ajax({
+    url: ajaxUrl,
+    type:'POST',
+    data: 'action=infinite_scroll&page_no='+ pageNumber + '&loop_file=loop',
+
+    success: function(html){
+      $('a#infiniteLoader').hide('1000');
+      $('#home-feed .pagination').before(html);
+    }
+  });
+  return false;
+}

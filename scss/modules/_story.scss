@@ -93,7 +93,7 @@ $contentBr2: $goldenBreakpoint;
 
 		@media (min-width: $contentBr2) {
 			h1 { font-size: 2em }
-			.body { @include visually-hidden() }
+			//.body { @include visually-hidden() }
 		}
 
 		@media (min-width: 1240px) { h1 { font-size: ms(2) } }

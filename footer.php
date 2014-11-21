@@ -17,8 +17,6 @@
 	</aside>
 
 </div>
-<!-- New infinite scroll -->
-<a id="scroll">Cargando más historias... <img src="<?php bloginfo('template_directory'); ?>/images/ajax-loader.gif" /></a>
 
 <?php wp_footer(); ?>
 

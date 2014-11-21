@@ -123,7 +123,7 @@ function themeFunction_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => ''
 	));
-	
+
 }
 add_action( 'widgets_init', 'themeFunction_widgets_init' );
 
@@ -213,6 +213,15 @@ function themeFunction_scripts() {
 		get_template_directory_uri() . '/bower_components/jquery-waypoints/waypoints.min.js',
 		array('jquery'),
 		'2.1.0',
+		true
+	);
+
+	//Main
+	wp_enqueue_script(
+		'plugins',
+		get_template_directory_uri() . '/scripts/plugins.js',
+		array('jquery'),
+		false,
 		true
 	);
 

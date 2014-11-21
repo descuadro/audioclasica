@@ -1,12 +1,4 @@
-<section class="feed" <?php if ( is_home() ): ?>id="home-feed"<?php endif ?>>
-	<?php if (is_category()): ?>
-
-		<header>
-			<h1><?php single_cat_title( '', true ); ?></h1>
-		</header>
-
-	<?php endif ?>
-
+	<div class="empty" style="display: inline;"></div>
 	<!-- Loop -->
 
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -53,12 +45,11 @@
 
 					</h6>
 					<h1 class="story-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-					<?php the_content(); ?>
-					<p align="right"><a href="<?php the_permalink() ?>"><strong>más <small><small>>></small></small></strong></a></p>
+
 					<div class="body">
-						bla
+						<?php the_content(); ?>
+						<p align="right"><a href="<?php the_permalink() ?>"><strong>más <small><small>>></small></small></strong></a></p>
 					</div>
-				
 				</header>
 
 			</article>
@@ -69,5 +60,3 @@
 		<?php #If third post, close featured loop ?>
 		<?php if( $wp_query->current_post == 2  ) echo '</div>'."\n"; ?>
 	<?php endwhile; // end of the loop. ?>
-
-</section>
