@@ -7,6 +7,10 @@ Banners
 $br1: 600px;
 $br2: 1023px;
 
+aside.sidebar {
+	padding-top: $bigHeaderHeight;
+}
+
 .extra-top {
 
 	clear: both;
@@ -16,6 +20,7 @@ $br2: 1023px;
 	a {
 		display: inline-block;
 	}
+	img { max-width: 100%; }
 }
 
 .banner-1 {
