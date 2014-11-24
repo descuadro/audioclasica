@@ -15,12 +15,6 @@
     	$post_classes = array( 'story', $post_cat, );
 		?>
 
-		<?php #If first post, open featured loop ?>
-		<?php if ( $wp_query->current_post == 0 ) { echo '<div class="featured-wrap">'."\n";  } ?>
-
-		<?php #If even, open wrap ?>
-		<?php if( $wp_query->current_post%2 == 1 ) echo  "\n".'<div class="wrap">'."\n" ; ?>
-
 			<article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
 
 				<?php #in principle, this isn't going in ?>
@@ -53,10 +47,4 @@
 				</header>
 
 			</article>
-
-		<?php #If odd and not first article, close wrap ?>
-		<?php if( $wp_query->current_post%2 == 0 && !$wp_query->current_post == 0 || $wp_query->current_post == $wp_query->post_count-1 ) echo '</div><div class="banner-holder"></div>'."\n"; ?>
-
-		<?php #If third post, close featured loop ?>
-		<?php if( $wp_query->current_post == 2  ) echo '</div>'."\n"; ?>
 	<?php endwhile; // end of the loop. ?>

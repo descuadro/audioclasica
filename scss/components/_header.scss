@@ -81,11 +81,16 @@ header[role="banner"] {
   filter: grayscale(0.5) blur(.001em);
   &:hover { filter: none; }
 
-  &.big {
-    height: $bigHeaderHeight;
-    opacity: 1;
-    filter: none;
-    .site-logo { transform: scale(1.6) }
+  &.fixie ~ main[role="main"] { padding-top: $smallHeaderHeight; }
+
+  @media (min-width: $tablet) {
+    &.big {
+      height: $bigHeaderHeight;
+      opacity: 1;
+      filter: none;
+      .site-logo { transform: scale(1.6) }
+    }
+    &.fixie ~ main[role="main"] { padding-top: $bigHeaderHeight; }
   }
 
   &.hide {
