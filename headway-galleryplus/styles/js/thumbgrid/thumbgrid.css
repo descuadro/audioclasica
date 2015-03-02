@@ -1,0 +1,15 @@
+.grid-gallery {overflow-y: auto;}
+.grid-gallery .no-scroll {overflow:visible}
+
+
+
+ul.grid-thumb a {text-decoration:none;position: relative}
+ul.grid-thumb a h3,
+ul.grid-thumb h3
+ {text-align:center;white-space: nowrap;overflow: hidden}
+ 
+ul.grid-thumb li {position: relative}
+
+/* Fix for Cloud zoom outside*/
+div#wrap { position: static !important; z-index: auto !important; }
+

@@ -1,0 +1,120 @@
+INSTALLATION
+------------
+
+Download zip file but do not unzip it. If your computer unzips it, restore it from the trash/recycle bin.
+In WordPress admin, go to the Active Plugin list and deactivate the older version on Gallery+
+In WordPress admin, go to the plugin installer and use the upload method, selecting the zip file you downloaded.
+Activate it when complete.
+
+That's it! All should be well.
+
+Please also review the changes listed below.
+
+CHANGELOG
+---------
+1.5.7 : 15-Jun-2012
+UPDATED: Pizazz libs with BackupBuddy 3 compatibility fix
+
+
+1.5.6 : 14-Jun-2012
+CHANGED: Support links to Headway forums [GalleryPBlockOptions.php]
+
+1.5.5 : 13-Jun-2012
+FIXED:    jQueryUI tabs conflict (Affected by JigoShop and others)
+CHANGED:  Renamed file and folder
+CHANGED:  Removed version check [galleryplus.php]
+CHANGED:  Updated HW updater function [galleryplus.php]
+
+
+1.5.4
+CHANGED:	Headway auto updater routine
+
+1.5.3:
+FIXED: Order showing as numeric in ThumbGrid settings
+FIXED: Padding between thumbs not working
+ADDED: Code for Headway marketplace compatibility
+
+1.5.2
+FIXED: The opacity of text background properly this time!
+FIXED: Lightbox background opacity not working
+
+1.5.1
+FIXED:		Missing text background area options for slider gallery
+CHANGED:	Updates to Pizazz libraries
+
+1.5.0
+ADDED:	WP auto updater
+
+1.4.1
+- ADDED:	PizazzWP check
+- ADDED:	Block title
+- FIXED:	Shortcode error when HW not active
+
+1.4.0
+- FIXED:	Put missing Image Resizing Method back! And then fixed error!
+
+1.3.9
+- CHANGED:	Text layout on gallery type options panel
+- ADDED:	PizazzWP integration 
+- CHANGED:	PNGs are saved with their transparency
+- FIXED:	Sort order and order by now working. Even tho I was sure I fixed at 1.3.2!!
+- ADDED: 	Ability to add classes to images in G+ galleries using form [gclass]your-custom-class-name[/gclass]
+- FIXED:	Accordion breaking when selecting URL to link images
+- FIXED:	Accordion captions not showing
+
+1.3.8
+- FIXED:	Navigation buttons not displaying
+- FIXED:	Changed default type to none selected to avoid problem with Slider not getitng image options when it was default
+- FIXED:	Some spellos and overlooked leaf references
+- FIXED:	Lightbox and zoom not working in ThumbGrid
+
+1.3.7
+- FIXED:	Refresh image cache error
+- FIXED: 	Default type is now Slider as it was meant to be
+- FIXED:	Bug where selecting type didn't allow type's options to show
+- CHANGED:	Default image gallery is now Samples, not none
+- ADDED:	Option to open URL in a new window
+
+1.3.6
+- ADDED:	Check for pluscache and message if not existing
+- ADDED:	Clear cache on saving in Visual Editor
+
+v1.3.4/1.3.5
+- FIXED:	Update message causing errors on some sites
+- CHANGED:  Made options in VE options panel closer together
+- CHANGED:	Removed several sample images to reduce file size
+
+v1.3.3
+- FIXED:	Problem with all images showing in galleries
+
+v1.3.2
+- FIXED:	"Order by" not working
+- ADDED:	"Sorted order" to "Order by" options. Works for G+ and WP galleries. Drag and drop in the gallery to sort.
+
+v1.3.1
+- ADDED: Activation check for HW3
+- FIXED: Wrong class call in deactivation 
+(Note: This bug will require you to manually deactivate G+ by renaming its folder via FTP)
+
+v1.3.0
+- CHANGED: Version number for something more significant since is now a block - to lessen confusion with the leaf
+- FIXED:	Fixed up $layout parameters that Clay removed
+- CHANGED:	Removed from beta
+
+
+v1.1.3 pr v1.2.0
+- FIXED:	Problem with single posts using same gallery for each post
+- ADDD:		Memory management
+
+v1.1.2
+- FIXED:	Version checking fail when PHP less than 5.3
+- FIXED:	Header error. Moved version msg
+
+
+v1.1.1 change log since v1.1.0
+
+- ADDED:	Version checking
+- CHANGED:	Using new Color Picker coz old one went away
+- FIXED:	Removed dotted border on nav buttons in slider
+- FIXED:	Headway nav menus behind slider
+

@@ -1,0 +1,259 @@
+/*
+Change log
+
+FUTURE:
+
+One day… Style designer maybe based on https://github.com/mikeplate/CSS3-Playground or https://github.com/mrflix/LayerStyles
+
+1.3.0
+- TO ADD:	Replace header background with a gallery
+- TO TRY:	Pass the gallery to the shortcode (Stéph) (I think this will be covered once we have templates)
+- TO ADD:	Template system. 
+- TO ADD:	Before/after images using URL in description for before. Maybe use hover replace - or a zoom… hmmmm…
+- TO ADD:	NGG tag support
+- TO FIX:	E+ compatibility! Maybe… :S
+- TO ADD:	Panorama style - if possible
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+OOPS! This is a bit behind!
+
+
+1.2.0
+- ADDED: 	Max Image dimension option
+- ADDED:	Temporary memory increase when processing images
+- TO DO: 	limit image size
+- FIXED:	Made image names unique so works with single post
+- TO DO:	NGG 1.9 compatibility
+
+1.1.2
+- FIXED:	Version checking fail when PHP less than 5.3
+- FIXED:	Header error. Moved version msg
+
+1.1.1
+- ADDED:	Version checking
+- CHANGED:	Using new Color Picker coz old one went away
+- FIXED:	Removed dotted border on nav buttons in slider
+- FIXED:	Headway nav menus behind slider
+
+
+1.1.0
+- ADDED:	Display of PHP memory limit on Miscellaneous tab
+
+1.1.0rc1
+- FIXED:	Problem when quotes are in title or caption in Lightbox- e.g. 24". Workaround replacing with right-smartquote
+- FIXED:	Sort order and names of buttons
+- CHANGED:	Put some instructions in the README
+- ADDED:	Confirmation message after clearing cache in WP admin
+- ADDED:	Thumbgrid thumbs crop control
+- CHANGED:	Moved changelog to its own file
+
+1.1.0b8
+- CHANGED:	User Guide location to online web page. Will mean easier updates
+- CHANGED:	Made deactivating the plugin empty the Headway caches and G+ cache, esp so no js hanging around
+- ADDED: 	Option to empty G+ image cache
+- ADDED:	G+ options panel
+- CHANGED:	Use own G+ cache not Headway's
+- FIXED:	Zoomup breaks carousel
+- FIXED:	Zoomup layout
+- ADDED:	Outside zoom (Zoomup)
+- FIXED:	Leafs disappear when image size is 1000x800! Memory prob. Increased php mem to 48M
+- FIXED:	Zoom outside getting hidden behind thumbs
+- FIXED:	Missing nav button preview in dialog tooltip
+- FIXED:	Blank grid width to 100%
+- CHANGED:	Updated general functions into a class and removed suprefluous code a files
+
+1.1.0b7
+- CHANGED:	Removed slashes appearing in text
+- CHANGED:	Put carousel gallery in a scrolling boxe as a non-js precaution.
+- CHANGED:	Uniqued all functions
+- CHANGED:	Moved image resizer to its own file
+- CHANGED:	Removed Stack style.
+- NOT DONE:	Option for mixed image dimensions in carousel. Portrait images appeared to be in front of landscape ones. Too messy
+
+1.1.0b6
+- ADDED:	Message on images tab advising about out of memory errors
+- FIXED:	"Do not recreate images" option so it actually works.
+
+1.1.0b5
+- CHANGED:	Text box to not overflow
+- FIXED:	Added code for multiple image actions for vertical nav slider :)
+- ADDED:	Carousel style
+- ADDED:	Image stack style
+- ADDED:	Accordion style
+- CHANGED:	Tidied up code folder structure
+- FIXED:	Problem with js not loading
+- FIXED: 	Problem in carousel js not changing titles
+
+1.1.0b4
+- CHANGED:	Modified code structure to accommodate multiple styles via multiple leaf types
+- ADDED:	Thumbs Grid leaf
+- CHANGED:	Lightbox/no link option to new option
+- ADDED:	Option to link from image to URL
+- ADDED:	Zoom inside option to Thumb Grid
+
+1.1.0b3
+- ADDED:	Text locations above and below images
+
+1.1.0b2
+- CHANGED:	Included buttonset in tooltip for button samples
+- CHANGED:	Button tooltip background to panel background
+- ADDED:	More buttons! 50 now.
+- CHANGED:	Split navigation menu into Nav Buttons and Nav Thumbs
+
+1.1.0b1
+- ADDED:	Image quality
+- ADDED: 	WP post and page galleries available
+- ADDED:	Image counts next to gallery names
+- ADDED:	Option to uses content's gallery - very useful in single post view
+- FIXED:	Missing quote mark in class name when no images.
+- CHANGED:	Totally new nav button system and buttons
+- ADDED:	Opacity control to lightbox
+- ADDED:	Plain black and white lightboxes
+- ADDED:	Option for Lightbox screen overlay colours black, grey, white
+- ADDED:	Resize options - Stretch, Match height, Match width, Fit to height and width
+- ADDED:	Image background colour option for resize
+- ADDED:	Reversed nav icons to double options
+
+	PUBLIC RELEASE
+1.0.5
+- CHANGED:	Text area shrinks if no caption
+
+1.0.4
+- ADDED:	prettyPhoto lightbox view built in
+
+1.0.3
+- CHANGED:	Changed gallery post type name from album to gp_gallery
+- CHANGED:	Included debug function
+- CHANGED:	Icon
+
+1.0.2
+- ADDED:	Warning if exif_filetype doesn't exist.
+
+1.0.1
+- FIXED:	Added fallback to getimagesize if exif_filetype doesn't exist
+
+	PUBLIC RELEASE
+1.0.0
+- CHANGED:	Hover nav images to something a little sexier
+- FIXED:	Always uses full sized image as source
+
+0.5.3
+- ADDED: 	Sample gallery
+- CHANGED:	Some defaults
+- CHANGED:	Finalized options and tabs
+
+TODO: Fix missing nav buttons!
+
+0.5.2
+- CHANGED: Tidied up options
+
+
+0.5.1
+- CHANGED:	Re-enabled Fast Change option.
+- CHANGED:	Tooltip for lighbox to warn about G+ & Lightbox 2 with IE8
+
+0.5.0
+- ADDED:	CSS3 enhancements tab
+- ADDED:	Frame shadow as CSS3 enhancement with inset option
+- ADDED:	Option to not recreate images when VE publishes or reloads (Saves time once you've got things the way you want).
+- CHANGED:	Incorporated E+ image processing improvements
+- ADDED:	Images tab
+- FIXED:	ep_options instead of gp_options
+- FIXED:	Nav button alignment
+- CHANGED:	Frame padding applies to thumbs as well which allows zero margins between thumbs and images
+- ADDED:	Frame rotation as CSS3 enhancement
+- FIXED:	End of loop bug when no nav and circular and auto start
+- ADDED:	Most of the tooltips
+
+0.3.3b
+- ADDED:	Sexy tooltips (instead of help) (Man isn't that going to be fun to implement in E+!)
+
+0.3.2b
+- ADDED:	Headway gallery compatibility
+- ADDED:	NextGen gallery compatibility
+
+0.3.1b
+- ADDED:	Sorting options
+- FIXED:	Vertical nav buttons!
+
+0.3.0b
+- CHANGED: 	Dumped TimThumb. Replaced with Jarrod Oberto's resizeer
+- ADDED:	Vertical and horizontal crop alignment
+
+0.2.1b 	Third beta
+- CHANGED Next/prev line text to back forward and thumb count
+- ADDED: Functionto automatically hide the source leaf for shortcoded leafs when on actual page
+- ADDED: Functionality to display a big grey filler box in VE where shortcoded leafs will appear.
+
+0.2.0b  Second beta
+- FIXED:  hostgator fix
+- ADDED: option to not link to images
+- FIXED:  overlapping arrows on hover
+- CHANGED: Larger icons and clickable area on hover
+- ADDED: Gallery+ leaf can now be referenced by shortcode. Youcan embed your G+ galleries right into our page content!
+- ADDED: Selectable nav icons
+
+0.1.0b	First beta
+0.0.5	CHANGED: Switched to SliderKit.
+
+0.0.3 	Added Polaroid Photobar gallery
+0.0.2	Added jQuery Gallery
+0.0.1	Initial
+
+*/
+
+
+
+
+/* 
+
+v1
+
+
+---------------------------------------------------------------------
+TODO (B) Fix all variable names
+---------------------------------------------------------------------
+TODO (B) pause option
+TODO (C) Option to show all albums
+TODO (C) Option to select multiple albums. prob will need to add that to title
+TODO (B) Optimise code
+TODO:(B) CSS3 design. Image shadows, text shadows
+---------------------------------------------------------------------
+To do:
+* ADDED: 	Messages options tab Takes it defaults from the admin options but can be overrided singularly
+* ADDED:	Generic options admin page
+* ADDED:	If G+ gallery desc has a url, image will link instead of light boxing so make featured posts galleries
+* ADDED:	
+* ADDED:	Link to URL instead of lightbox
+
+v1+
+* multiple thumb rows/columns
+- Gallery styles
+- Plugin and shortcode it (more), using templates of option settings.
+* Add other sources. E.g. Flickr
+- Color picker
+- Watermarks
+* Image counts
+- variable hover buttons
+- hover skip buttons too
+- Zoom http://www.mind-projects.it/projects/jqzoom/, http://www.professorcloud.com/mainsite/cloud-zoom.htm, http://www.magictoolbox.com/magiczoom/
+- Pause button
+- Minimilaist lightbox view
+- white background in lightbox
+- Link images
+
+From Eric Graf
+image management/albums, 
+fast loading, 
+SEO alt tags visible, 
+mobile friendly, 
+custom size options, 
+options for transitions/timing if slideshow capable, 
+easy user navigation and options for this in admin, 
+capable of being a main slider, 
+css shortcodes with a code menu to choose from since I don't know any css, 
+options for display (nav buttons, scroll bar/thumbs)
+
+
+*/
+

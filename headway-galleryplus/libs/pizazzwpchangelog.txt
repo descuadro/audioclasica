@@ -1,0 +1,64 @@
+INSTALLATION
+============
+
+- Download zip file but do not unzip it. If your computer unzips it, restore it from the trash/recycle bin.
+- In WordPress admin, go to the Active Plugin list and deactivate the older version on PizazzWP
+- In WordPress admin, go to the plugin installer and use the upload method, selecting the zip file you downloaded.
+- Activate it when complete.
+
+That's it! All should be well.
+
+Please review the changes listed below.
+
+CHANGELOG
+=========
+1.2.3
+- CHANGED: Floating buttons move to bottom of the page on screens less than 500px
+- UPDATED:	jQuery Cycle 2.9999.3
+
+1.2.2
+- CHANGED:    Floating buttons hidden on screens less that 500px wide
+- CHANGED:  Various css stylings
+- ADDED:    jQuery Cycle and FitText
+- CHANGED:  Put metabaoxes js in its own file
+- CHANGED:  PizazzWP to Pizazz
+- CHANGED:  Load point for colorpicker
+- CHANGED:  Floaters tooltips
+- CHANGED:  Removed Headway description and link
+
+1.2.1
+- FIXED:	Image paths to be protocol relative
+
+1.2.0
+- CHANGED:	Emdedded in each plugin
+
+1.1.2
+- ADDED:	Thumbnails show in post and page listings
+- CHANGED:	Menu access so editors can editor galleries etc
+- TO ADD:	News feed from PizazzWP site
+- TO ADD:	Direct support logging
+- TO ADD:	UCD
+- TO ADD:	Options to control roles access
+
+1.1.1
+- ADDED:	Support link
+- CHANGED:	Description texts
+
+1.1
+- ADDED:	Floating buttons
+- CHANGED:	Extras menu to Shortcodes and added Floating Buttons menu
+- ADDED:	URL option
+- ADDED:	None to page list
+
+1.0.1
+- CHANGED: 	Tidied up text in About and Extras
+- FIXED:	About PizazzWP menu doesn't show twice
+- FIXED: 	PizazzWP's own menus appear before the add-ons
+- ADDED:	PizazzWP version display
+- CHANGED:	About submenu to PizazzWP
+
+1.0.0
+FEATURES:
+- Groups all PizazzWP plugins into one menu
+- Includes several useful WP shortcodes
+- Provides info and links for the other PizazzWP plugins

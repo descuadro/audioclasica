@@ -1,0 +1,121 @@
+.pzwp-floater {
+  border-radius: 3px;
+	font-family: sans-serif;
+	font-weight: bold;
+	line-height: 1.5;
+	 text-align: center;
+	 box-shadow: 1px 1px 5px #444;
+	    padding: 5px;
+   border-style: solid;
+   border-width: 3px;
+	 	 margin: 0;
+        z-index:100000
+}
+
+.pzwp-floater a {
+	text-decoration:none;
+}
+
+.pzwp-floater a:hover {
+	text-decoration:underline;
+}
+
+@media all and (max-width: 520px) {
+	.pzwp-floater {
+		position:relative!important;
+		-webkit-transform: none!important;
+		-moz-transform: none!important;
+		-ms-transform: none!important;
+		-o-transform: none!important;
+		transform: none!important;
+		right:0!important;
+		left:0!important;
+		top:0!important;
+		margin:0 auto;
+	}
+}
+
+.pzwp-dialog-popup {
+}
+
+
+#pzwp-dialog {
+	background: #fff;
+	box-shadow: 0 0 5px #000;
+	  position: absolute;
+	   padding: 20px;
+	    height: 600px;
+	     width: 400px;
+	  	  left: 300px;
+		   top: 100px;
+}
+
+
+
+.rotate-90 {
+  -webkit-transform: rotate(-90deg); 
+     -moz-transform: rotate(-90deg); 
+      -ms-transform: rotate(-90deg); 
+       -o-transform: rotate(-90deg); 
+          transform: rotate(-90deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+                     M11=6.123233995736766e-17, M12=1, M21=-1, M22=6.123233995736766e-17, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+.rotate-45 {
+  -webkit-transform: rotate(-45deg); 
+     -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+       -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+                     M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+.rotate90 {
+  -webkit-transform: rotate(90deg); 
+     -moz-transform: rotate(90deg); 
+      -ms-transform: rotate(90deg); 
+       -o-transform: rotate(90deg); 
+          transform: rotate(90deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+                     M11=6.123031769111886e-17, M12=-1, M21=1, M22=6.123031769111886e-17, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+.rotate45 {
+  -webkit-transform: rotate(45deg);  /* Saf3.1+, Chrome */
+     -moz-transform: rotate(45deg);  /* FF3.5+ */
+      -ms-transform: rotate(45deg);  /* IE9 */
+       -o-transform: rotate(45deg);  /* Opera 10.5 */
+          transform: rotate(45deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+                     M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+               zoom: 1;
+}
+
+
+/* IE crap */
+/* IE8 no -45 left, 
+IE9 - no filters
+IE7 no -45
+*/
+
+/* IE9 */
+body.ie9 .rotate90 {filter:none;}
+body.ie9 .rotate-90 {filter:none;}
+
+/* IE7 IE8 */
+body.ie7 .pzwp-floater.rotate-90,
+body.ie8 .pzwp-floater.rotate-90
+{
+  left:0!important;
+}
+
+body.ie7 .pzwp-floater.rotate90, 
+body.ie8 .pzwp-floater.rotate90 
+{
+  right:0!important;
+}

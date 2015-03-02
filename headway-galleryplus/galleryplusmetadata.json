@@ -1,0 +1,17 @@
+{
+    "name" : "Pizazz GalleryPlus",
+    "slug" : "pzgalleryplus",
+    "download_url" : "https://s3.amazonaws.com/341public/LATEST/headway-galleryplus-157.zip",
+    "version" : "1.5.7",
+    "requires" : "3.0.0",
+    "tested" :  "3.4.0",
+    "last_updated" : "2012-06-15 12:00:00",
+    "upgrade_notice" : "Minor updates",
+    "author" : "Chris Howard",
+    "author_homepage":"http://pizazzwp.com",
+    "sections" : {
+        "description" : "GalleryPlus for Headway is a great block for displaying your galleries of photos. And what’s more, it is four blocks in one! With GalleryPlus you get an Accordion gallery block, a Carousel gallery block, a Slider gallery block, and a Thumbgrid gallery block.",
+        "installation" : "Click [Install Update Now]",
+        "changelog" : "<h4>1.5.7 : 15-Jun-2012</h4><ul><li>UPDATED: Pizazz libs with BackupBuddy 3 compatibility fix</li></ul><h4>1.5.6 : 14-Jun-2012</h4><ul><li>CHANGED: Support links to Headway forums</li></ul><h4>1.5.5 : 13-Jun-2012</h4><ul><li>CHANGED:  Removed version check</li><li>CHANGED:  Updated HW updater function</li><li>CHANGED:  Renamed file and folder</li><li>FIXED:    jQueryUI tabs conflict (Affected by JigoShop and others)</li></ul><h4>1.5.4</h4><ul><li>CHANGED: Headway auto updater routine</li></ul><h4>1.5.3</h4><ul><li>FIXED: Order showing as numeric in ThumbGrid settings</li><li>FIXED: Padding between thumbs not working</li><li>ADDED: Code for Headway marketplace compatibility</li></ul><h4>1.5.2</h4><ul><li>FIXED: Lightbox background opacity not working</li><li>FIXED: The opacity of text background properly this time!</li></ul><h4>1.5.1</h4><ul><li>FIXED: Missing text background options for slider galleries</li></ul><h4>1.5.0</h4><ul><li>ADDED: WP Auto update</li></ul>"
+    }
+}

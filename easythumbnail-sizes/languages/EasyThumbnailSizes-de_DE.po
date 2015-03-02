@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Thumbnail Sizes\n"
+"POT-Creation-Date: 2014-11-14 22:40+0100\n"
+"PO-Revision-Date: 2014-11-15 00:15+0100\n"
+"Last-Translator: Lutz Schroeer <latz@elektroelch.de>\n"
+"Language-Team: Lutz Schroeer <latz@elektroelch.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: EasyThumbnailSizes_Options.php:80
+msgid "Name"
+msgstr "Name"
+
+#: EasyThumbnailSizes_Options.php:91
+msgid "Width"
+msgstr "Breite"
+
+#: EasyThumbnailSizes_Options.php:104
+msgid "Height"
+msgstr "Höhe"
+
+#: EasyThumbnailSizes_Options.php:115
+msgid "Crop"
+msgstr "Crop"
+
+#: EasyThumbnailSizes_Options.php:135
+msgid "Add"
+msgstr "Hinzuf&uuml;gen"
+
+#: EasyThumbnailSizes_Options.php:178
+msgid "Remove"
+msgstr "Entfernen"
+
+#: EasyThumbnailSizes_Options.php:191
+msgid "Error:"
+msgstr "Fehler:"
+
+#: EasyThumbnailSizes_Options.php:192
+msgid "No name given"
+msgstr "Keine Name angeeben"
+
+#: EasyThumbnailSizes_Options.php:193
+msgid "No width given"
+msgstr "Keine Breite angeben"
+
+#: EasyThumbnailSizes_Options.php:194
+msgid "No height given"
+msgstr "Kein Höhe angegeben"
+
+#: EasyThumbnailSizes_Options.php:195
+msgid "Invalid value for width"
+msgstr "Ungültiger Wert für Breite"
+
+#: EasyThumbnailSizes_Options.php:196
+msgid "Invalid value for height"
+msgstr "Ungültiger Wert für Höhe"
+
+#: EasyThumbnailSizes_Options.php:197
+msgid "Name conflict"
+msgstr "Doppelter Name"

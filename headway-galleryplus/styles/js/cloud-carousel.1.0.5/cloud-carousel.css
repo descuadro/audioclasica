@@ -1,0 +1,70 @@
+div.carousel-gallery-set {overflow-y:scroll;}
+
+#left-but:active,
+#left-but:hover
+
+ {		
+	background-position: 0px 32px;
+	cursor:pointer;
+}
+
+#right-but:active,
+#right-but:hover
+ {	
+	cursor:pointer;
+	background-position: 32px 32px;
+}
+
+#left-but,
+#right-but {
+	width:32px; height:32px;
+	display:inline-block;
+	background-image:url(carousel211-32.png);
+	position:absolute;
+}
+
+#left-but {
+	left:20px;
+	background-position: 0px 0px;
+
+}
+#right-but {
+	right:20px;
+	background-position: 32px 0px;
+
+}
+
+
+
+.navscroller {width:64px;height:32px;
+	position: absolute;
+	bottom:20px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.itemtext {
+	position: absolute;
+	bottom:0px;
+	width: 100%;
+	overflow: hidden;
+	text-align:center;
+}
+/****************************************/
+
+h3#title-text  {
+	display:none;	
+	color:#555;
+	font-size:17px;
+	font-weight:bold;
+	margin:20px;
+	margin-bottom:10px;
+}
+p#alt-text {
+	display:none;	
+	color:#777;
+	margin:20px;
+	margin-top:0px;
+	font-size:14px;
+	
+}
